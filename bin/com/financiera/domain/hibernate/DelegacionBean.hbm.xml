@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping SYSTEM "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+
+<hibernate-mapping package="com.financiera.domain.bean">
+	<class name="DelegacionBean" table="DELEGACION" lazy="true">
+		<id name="id" column="ID_DELEGACION" type="java.lang.Long">
+			<generator class="native"/>
+		</id>
+		<property name="codigo"		  type="java.lang.String" column="CODIGO"/>	
+		<property name="descripcion"  type="java.lang.String" column="DESCRIPCION"/>
+		<property name="f_alta"		  type="java.util.Date" column="FECHA_ALTA"/>
+				
+		<many-to-one name="localizacion" column="ID_LOCALIZACION" class="LocalizacionBean" update="true" insert="true"/>
+
+		<many-to-one name="entidad" column="ID_ENTIDAD" class="EntidadBean" update="true" insert="true"/>
+		
+		<many-to-one name="banco" column="ID_BANCO" class="BancoBean" update="true" insert="true"/>
+		<property name="utilizar"	   type="java.lang.Integer" column="UTILIZAR"/>
+	</class>
+	<query name="DelegacionBean.getAll">
+        <![CDATA[from DelegacionBean d order by d.id]]>
+    </query>
+   	<query name="DelegacionBean.getAllOrderDescripcion">
+        <![CDATA[from DelegacionBean d order by d.descripcion]]>
+    </query>
+    <query name="DelegacionBean.findById">
+        <![CDATA[from DelegacionBean d where d.id = :id]]>
+    </query>
+</hibernate-mapping>

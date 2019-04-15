@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping SYSTEM "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+
+<hibernate-mapping package="com.financiera.domain.bean">
+	<class name="DisparoBean" table="DISPARO" lazy="true">
+		<id name="id" column="ID_DISPARO" type="java.lang.Long">
+			<generator class="native"/>
+		</id>
+		<property name="fecha"		   type="java.util.Date" column="FECHA"/>	
+		<property name="cantRegistros" type="java.lang.Integer" column="CANT_REGISTRO"/>	
+		<property name="importe"       type="java.lang.Double" column="IMPORTE"/>
+	</class>
+	<query name="DisparoBean.getAll">
+        <![CDATA[from DisparoBean d order by d.id]]>
+    </query>
+</hibernate-mapping>

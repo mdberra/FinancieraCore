@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping SYSTEM "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+
+<hibernate-mapping package="com.financiera.domain.bean">
+	<class name="VendedorBean" table="VENDEDOR" lazy="true">
+		<id name="id" column="ID_VENDEDOR" type="java.lang.Long">
+			<generator class="native"/>
+		</id>
+		<property name="codigo"		type="java.lang.String" column="CODIGO"/>
+		<property name="nombre"	 	type="java.lang.String" column="NOMBRE"/>
+		<property name="utilizar"	type="java.lang.Integer" column="UTILIZAR"/>
+	</class>
+	<query name="VendedorBean.getAll">
+        <![CDATA[from VendedorBean v order by v.id]]>
+    </query>
+   	<query name="VendedorBean.findById">
+        <![CDATA[from VendedorBean v where v.id = :id]]>
+    </query>
+</hibernate-mapping>

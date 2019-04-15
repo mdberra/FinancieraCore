@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping SYSTEM "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+
+<hibernate-mapping package="com.financiera.domain.bean">
+	<class name="GrupoPermisoBean" table="GRUPO_PERMISO" lazy="true">
+		<id name="id" column="ID_GRUPO" type="java.lang.Long">
+			<generator class="native"/>
+		</id>
+		<set name="permisos" table="PERMISO" inverse="true" cascade="all-delete-orphan">
+			<key column="ID_PERMISO" />
+			<one-to-many class="PermisoBean" />
+		</set>
+	</class>
+	<query name="GrupoPermisoBean.getAll">
+        <![CDATA[from GrupoPermisoBean g order by g.id]]>
+    </query>
+   	<query name="GrupoPermisoBean.findById">
+        <![CDATA[from GrupoPermisoBean b where b.id = :id]]>
+    </query>
+</hibernate-mapping>

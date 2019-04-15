@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping SYSTEM "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+
+<hibernate-mapping package="com.financiera.domain.bean">
+	<class name="UsuarioBean" table="USUARIO" lazy="true">
+		<id name="id" column="ID_USUARIO" type="java.lang.Long">
+			<generator class="native"/>
+		</id>
+		<property name="nombre"	      type="java.lang.String" column="NOMBRE"/>	
+		<property name="apellido"     type="java.lang.String" column="APELLIDO"/>	
+		<property name="fechaDesde"   type="java.util.Date"   column="FECHA_DESDE"/>	
+		<property name="fechaHasta"   type="java.util.Date"   column="FECHA_HASTA"/>	
+		<property name="alias"		  type="java.lang.String" column="ALIAS"/>	
+		<property name="password"	  type="java.lang.String" column="PASSWORD"/>
+		<property name="empresa"	  type="java.lang.String" column="EMPRESA"/>
+		<set name="grupos" table="GRUPO_PERMISO" inverse="true" cascade="all-delete-orphan">
+			<key column="ID_GRUPO" />
+			<one-to-many class="GrupoPermisoBean" />
+		</set>
+	</class>
+	<query name="UsuarioBean.getAll">
+        <![CDATA[from UsuarioBean u order by u.id]]>
+    </query>
+   	<query name="UsuarioBean.findById">
+        <![CDATA[from UsuarioBean b where b.id = :id]]>
+    </query>
+    <query name="UsuarioBean.findByAlias">
+        <![CDATA[from UsuarioBean b where b.alias = :alias]]>
+    </query>
+</hibernate-mapping>

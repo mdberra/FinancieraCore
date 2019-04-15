@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping SYSTEM "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+
+<hibernate-mapping package="com.financiera.domain.bean">
+	<class name="MovimientoHistBean" table="MOVIMIENTO_HIST" lazy="true">
+		<id name="id" column="ID_MOVIMIENTO_HIST" type="java.lang.Long">
+			<generator class="native"/>
+		</id>
+		<property name="idCliente" 		column="ID_CLIENTE" 	type="java.lang.Long"/>
+		<many-to-one name="cliente"		column="ID_CLIENTE"		class="ClienteBean"		update="false" insert="false"/>
+
+	 	<property name="idServicio" 	column="ID_SERVICIO" 	type="java.lang.Long"/>
+
+		<property name="fecha"		 type="java.util.Date"    column="FECHA"/>
+		<property name="importe"	 type="java.lang.Double"  column="IMPORTE"/>
+		<property name="descripcion" type="java.lang.String"  column="DESCRIPCION"/>
+		<property name="nroCuota"	 type="java.lang.Integer" column="NRO_CUOTA"/>
+		<property name="totalCuotas" type="java.lang.Integer" column="TOTAL_CUOTA"/>
+		<many-to-one name="estado"   column="ID_ESTADO" class="EstadoMovBean" update="true" insert="true"/>
+		<many-to-one name="disparo"  column="ID_DISPARO" class="DisparoBean" update="true" insert="true"/>
+	</class>
+	<query name="MovimientoHistBean.getAll">
+        <![CDATA[from MovimientoHistBean m order by m.idCliente asc, m.fecha asc]]>
+    </query>
+   	<query name="MovimientoHistBean.getAllbyCliente">
+        <![CDATA[from MovimientoHistBean m where m.idCliente = :idCliente order by m.idServicio asc, m.fecha asc]]>
+    </query>
+    <query name="MovimientoHistBean.findByServicio">
+        <![CDATA[from MovimientoHistBean m where m.idServicio = :idServicio order by m.fecha asc]]>
+    </query>
+    
+</hibernate-mapping>

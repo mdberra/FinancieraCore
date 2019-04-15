@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping SYSTEM "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+
+<hibernate-mapping package="com.financiera.domain.bean">
+	<class name="EntidadBean" table="ENTIDAD" lazy="true">
+		<id name="id" column="ID_ENTIDAD" type="java.lang.Long">
+			<generator class="native"/>
+		</id>
+		<property name="codigo"		 type="java.lang.String" column="CODIGO"/>
+		<property name="descripcion" type="java.lang.String" column="DESCRIPCION"/>
+	</class>
+	<query name="EntidadBean.getAll">
+        <![CDATA[from EntidadBean e order by e.id]]>
+    </query>
+   	<query name="EntidadBean.findById">
+        <![CDATA[from EntidadBean b where b.id = :id]]>
+    </query>
+</hibernate-mapping>

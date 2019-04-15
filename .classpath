@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-10">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/marce/Liberdina/Lib/antlr-2.7.7.jar"/>
+	<classpathentry kind="lib" path="/home/marce/Liberdina/Lib/asm-3.1.jar"/>
+	<classpathentry kind="lib" path="/home/marce/Liberdina/Lib/asm-attrs.jar"/>
+	<classpathentry kind="lib" path="/home/marce/Liberdina/Lib/cglib-2.2.jar"/>
+	<classpathentry kind="lib" path="/home/marce/Liberdina/Lib/commons-collections-3.2.2.jar"/>
+	<classpathentry kind="lib" path="/home/marce/Liberdina/Lib/commons-logging-1.2.jar"/>
+	<classpathentry kind="lib" path="/home/marce/Liberdina/Lib/dom4j-1.6.1.jar"/>
+	<classpathentry kind="lib" path="/home/marce/Liberdina/Lib/hibernate3.jar"/>
+	<classpathentry kind="lib" path="/home/marce/Liberdina/Lib/jstl.jar"/>
+	<classpathentry kind="lib" path="/home/marce/Liberdina/Lib/jta.jar"/>
+	<classpathentry kind="lib" path="/home/marce/Liberdina/Lib/jxl.jar"/>
+	<classpathentry kind="lib" path="/home/marce/Liberdina/Lib/log4j-1.2-api-2.5.jar"/>
+	<classpathentry kind="lib" path="/home/marce/Liberdina/Lib/servlet-api.jar"/>
+	<classpathentry kind="lib" path="/home/marce/Liberdina/Lib/standard.jar"/>
+	<classpathentry kind="lib" path="/home/marce/Desktop/Code/Lib/mysql-connector-java-8.0.15.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping SYSTEM "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+
+<hibernate-mapping package="com.financiera.domain.bean">
+	<class name="TemporalSVilleBean" table="TEMPORAL_SVILLE" lazy="true">
+		<id name="id" column="ID_TEMPORAL_SVILLE" type="java.lang.Long">
+			<generator class="native"/>
+		</id>
+		<property name="tipoDeNovedad"			type="java.lang.String"  column="TIPO_NOVEDAD"/>
+		<property name="cuitEmpresa"			type="java.lang.String"  column="CUIT_EMPRESA"/>
+		<property name="sector"					type="java.lang.String"  column="SECTOR"/>
+		<property name="prestacion"				type="java.lang.String"  column="PRESTACION"/>
+		<property name="fechaVencimiento"		type="java.lang.String"  column="FECHA_VENCIMIENTO"/>
+		<property name="cbu1"					type="java.lang.String"  column="CBU1"/>
+		<property name="cbuRelleno"				type="java.lang.String"  column="CBU_RELLENO"/>
+		<property name="cbu2"					type="java.lang.String"  column="CBU2"/>
+		<property name="idCliente"				type="java.lang.String"  column="ID_CLIENTE"/>
+		<property name="vtoDebOri"				type="java.lang.String"  column="VTO_DEB_ORI"/>
+		<property name="refDebito"				type="java.lang.String"  column="REF_DEBITO"/>
+		<property name="importe"				type="java.lang.String"  column="IMPORTE"/>
+		<property name="tipoMoneda"				type="java.lang.String"  column="TIPO_MONEDA"/>
+		<property name="relleno"				type="java.lang.String"  column="RELLENO"/>
+		<property name="pagador"				type="java.lang.String"  column="PAGADOR"/>
+		<property name="codRechazo"				type="java.lang.String"  column="COD_RECHAZO"/>
+		<property name="nroOrden"				type="java.lang.String"  column="NRO_ORDEN"/>
+		<property name="nroMovimiento"			type="java.lang.String"  column="NRO_MOVIMIENTO"/>
+		<property name="relleno1"				type="java.lang.String"  column="RELLENO1"/>
+	</class>
+   	<query name="TemporalSVilleBean.getAllOrderCliente">
+        <![CDATA[from TemporalSVilleBean t order by t.idCliente asc, t.fechaVencimiento asc]]>
+    </query>
+    
+</hibernate-mapping>

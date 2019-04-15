@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping SYSTEM "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+
+<hibernate-mapping package="com.financiera.domain.bean">
+	<class name="FechasDisparadasBean" table="FECHAS_DISPARADAS" lazy="true">
+		<id name="id" column="ID_F_DISPARADAS" type="java.lang.Long">
+			<generator class="native"/>
+		</id>
+		<property name="idDelegacion" type="java.lang.Long"	column="ID_DELEGACION"/>
+		<many-to-one name="delegacion" column="ID_DELEGACION" class="DelegacionBean" update="false" insert="false" />
+		<property name="idDisparo" type="java.lang.Long"	column="ID_DISPARO"/>
+		<many-to-one name="disparo" column="ID_DISPARO" class="DisparoBean" update="false" insert="false" />
+		<property name="fechaDisparo" type="java.util.Date"	column="FECHA_DISPARO"/>	
+	</class>
+	<query name="FechasDisparadasBean.getAll">
+        <![CDATA[from FechasDisparadasBean f order by f.idDelegacion, f.idDisparo, f.fechaDisparo]]>
+    </query>
+   	<query name="FechasDisparadasBean.findByDelegacionFecha">
+        <![CDATA[from FechasDisparadasBean f where f.idDelegacion = :idDelegacion and f.fechaDisparo = :fechaDisparo]]>
+    </query>
+</hibernate-mapping>

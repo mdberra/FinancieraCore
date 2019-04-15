@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping SYSTEM "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+
+<hibernate-mapping package="com.financiera.domain.bean">
+	<class name="EstadoMovBean" table="Estado_Mov" lazy="true">
+		<id name="id" column="ID_ESTADO" type="java.lang.Long">
+			<generator class="native"/>
+		</id>
+		<property name="estado" type="java.lang.Integer" column="ESTADO"/>	
+		<property name="color"  type="java.lang.Integer" column="COLOR"/>	
+		<property name="codRechazo" type="java.lang.String" column="COD_RECHAZO"/>	
+	</class>
+	<query name="EstadoMovBean.findById">
+        <![CDATA[from EstadoMovBean e where e.id = :id]]>
+    </query>
+	<query name="EstadoMovBean.findByEstado">
+        <![CDATA[from EstadoMovBean e where e.estado = :estado]]>
+    </query>
+	<query name="EstadoMovBean.findByColor">
+        <![CDATA[from EstadoMovBean e where e.color = :color]]>
+    </query>
+   	<query name="EstadoMovBean.findByCodRechazo">
+        <![CDATA[from EstadoMovBean e where e.codRechazo = :codRechazo]]>
+    </query>
+   	<query name="EstadoMovBean.getAllRechazos">
+        <![CDATA[from EstadoMovBean e where e.color = 4 order by e.codRechazo]]>
+    </query>
+   	<query name="EstadoMovBean.getAll">
+        <![CDATA[from EstadoMovBean e order by e.id]]>
+    </query>
+</hibernate-mapping>

@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping SYSTEM "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+
+<hibernate-mapping package="com.financiera.domain.bean">
+	<class name="BancoBean" table="BANCO" lazy="true">
+		<id name="id" column="ID_BANCO" type="java.lang.Long">
+			<generator class="native"/>
+		</id>
+		<property name="codigo"		  type="java.lang.String" column="CODIGO"/>	
+		<property name="descripcion"  type="java.lang.String" column="DESCRIPCION"/>	
+				
+		<many-to-one name="localizacion" column="ID_LOCALIZACION"   class="LocalizacionBean"/>
+
+		<property name="codigoDebito" type="java.lang.Integer" column="CODIGO_DEBITO"/>
+		<property name="descripPrestacion" type="java.lang.String" column="DESCRIP_PRESTACION"/>	
+		<property name="bancoRecaudador" type="java.lang.String" column="BANCO_RECAUDADOR"/>	
+		
+	</class>
+	<query name="BancoBean.getAll">
+        <![CDATA[from BancoBean b order by b.id]]>
+    </query>
+   	<query name="BancoBean.getAllOrderDescripcion">
+        <![CDATA[from BancoBean b order by b.descripcion]]>
+    </query>
+   	<query name="BancoBean.findById">
+        <![CDATA[from BancoBean b where b.id = :id]]>
+    </query>
+</hibernate-mapping>

@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping SYSTEM "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+
+<hibernate-mapping package="com.financiera.domain.bean">
+	<class name="TemporalBaproBean" table="TEMPORAL_BAPRO" lazy="true">
+		<id name="id" column="ID_TEMPORAL_BAPRO" type="java.lang.Long">
+			<generator class="native"/>
+		</id>
+		<property name="codigoInternoBanco"		type="java.lang.String"  column="COD_INTERNO_BCO"/>
+		<property name="fechaVencimiento"		type="java.lang.String"  column="FECHA_VENCIMIENTO"/>
+		<property name="codigoEmpresa"			type="java.lang.String"  column="COD_EMPRESA"/>
+		<property name="idCliente"				type="java.lang.String"  column="ID_CLIENTE"/>
+		<property name="tipoMoneda"				type="java.lang.String"  column="TIPO_MONEDA"/>
+		<property name="cbu"					type="java.lang.String"  column="CBU"/>
+		<property name="importe"				type="java.lang.String"  column="IMPORTE"/>
+		<property name="cuitEmpresa"			type="java.lang.String"  column="CUIT_EMPRESA"/>
+		<property name="descripPrestacion"		type="java.lang.String"  column="DESCRIP_PRESENTACION"/>
+		<property name="referenciaUnivDebito"	type="java.lang.String"  column="REF_UNIV_DEBITO"/>
+		<property name="reservado"				type="java.lang.String"  column="RESERVADO"/>
+		<property name="nuevoIdCliente"			type="java.lang.String"  column="NUEVO_ID_CLIENTE"/>
+		<property name="codRechazo"				type="java.lang.String"  column="COD_RECHAZO"/>
+		<property name="nombreEmpresa"			type="java.lang.String"  column="NOMBRE_EMPRESA"/>
+	</class>
+   	<query name="TemporalBaproBean.getAllOrderCliente">
+        <![CDATA[from TemporalBaproBean t order by t.idCliente asc, t.fechaVencimiento asc]]>
+    </query>
+    
+</hibernate-mapping>

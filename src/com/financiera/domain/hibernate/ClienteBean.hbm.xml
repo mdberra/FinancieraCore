@@ -1,0 +1,70 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping SYSTEM "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+
+<hibernate-mapping package="com.financiera.domain.bean">
+	<class name="ClienteBean" table="CLIENTE" lazy="true">
+		<id name="id" column="ID_CLIENTE" type="java.lang.Long">
+			<generator class="native"/>
+		</id>
+		<property name="tipoDoc"	type="java.lang.String"	column="TIPO_DOC"/>
+		<property name="nroDoc"		type="java.lang.Integer" column="NRO_DOC"/>
+		<property name="cbu" 		type="java.lang.String"	column="CBU"/>
+		<property name="sucursalCA" type="java.lang.String"	column="CA_SUCURSAL"/>
+		<property name="nroCA" 		type="java.lang.String"	column="CA_NRO"/>
+		<property name="nombre"		type="java.lang.String"	column="NOMBRE"/>
+		<property name="apellido"	type="java.lang.String"	column="APELLIDO"/>
+		<property name="fechaIngreso" type="java.util.Date"	column="F_INGRESO"/>
+				
+        <many-to-one name="locParticular" column="ID_LOC_PARTICULAR" class="LocalizacionBean" update="true" insert="true"/>
+        <many-to-one name="locLaboral" column="ID_LOC_LABORAL" class="LocalizacionBean" update="true" insert="true" />
+        <many-to-one name="locInformado" column="ID_LOC_INFORMADO" class="LocalizacionBean" update="true" insert="true" />
+
+		<property name="idDelegacion" type="java.lang.Long"	column="ID_DELEGACION"/>
+        <many-to-one name="delegacion" column="ID_DELEGACION" class="DelegacionBean" update="false" insert="false" />
+		
+		<property name="estado"		type="java.lang.Integer" column="ESTADO"/>
+		<property name="fechaEstado" type="java.util.Date"	column="F_ESTADO"/>	
+		<property name="estadoAnterior"	type="java.lang.Integer" column="ESTADO_ANTERIOR"/>	
+		<property name="comentarios" type="java.lang.String" update="true" insert="true" length="65535" column="COMENTARIOS"/>
+		
+		<set name="servicios" table="SERVICIO" inverse="true" cascade="all-delete-orphan">
+			<key column="ID_CLIENTE" />
+			<one-to-many class="ServicioBean" />
+		</set>
+		<set name="movimientos" table="MOVIMIENTO" inverse="true" cascade="all-delete-orphan">
+			<key column="ID_CLIENTE" />
+			<one-to-many class="MovimientoBean" />
+		</set>
+	</class>
+
+	<query name="ClienteBean.getId">
+        <![CDATA[from ClienteBean c where c.id = :id]]>
+    </query>
+	<query name="ClienteBean.getNroDoc">
+        <![CDATA[from ClienteBean c where c.nroDoc = :nroDoc]]>
+    </query>
+    <query name="ClienteBean.getNroCA">
+        <![CDATA[from ClienteBean c where c.nroCA = :nroCA]]>
+    </query>
+	<query name="ClienteBean.findByDelegacion">
+        <![CDATA[from ClienteBean c where c.idDelegacion = :idDelegacion order by c.apellido asc]]>
+    </query>
+   	<query name="ClienteBean.findByDelegacionEstado">
+        <![CDATA[from ClienteBean c where c.idDelegacion = :idDelegacion and c.estado = :idEstado order by c.apellido asc]]>
+    </query>
+	<query name="ClienteBean.getAllbyDelegacion">
+        <![CDATA[from ClienteBean c order by c.idDelegacion asc, c.apellido asc]]>
+    </query>
+	<query name="ClienteBean.getAll">
+        <![CDATA[from ClienteBean c order by c.id]]>
+    </query>
+   	<query name="ClienteBean.getAllbyApellido">
+        <![CDATA[from ClienteBean c where c.apellido like :apellido order by c.apellido]]>
+    </query>
+  	<query name="ClienteBean.getSucNroCA">
+        <![CDATA[from ClienteBean c where c.sucursalCA = :sucCA and c.nroCA = :nroCA]]>
+    </query>
+    <query name="ClienteBean.clientesEstado">
+        <![CDATA[from ClienteBean c where c.estado = :estado order by c.idDelegacion, c.tipoDoc, c.nroDoc]]>
+    </query>
+</hibernate-mapping>

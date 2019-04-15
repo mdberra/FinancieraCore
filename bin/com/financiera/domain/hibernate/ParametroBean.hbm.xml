@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping SYSTEM "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+
+<hibernate-mapping package="com.financiera.domain.bean">
+	<class name="ParametroBean" table="PARAMETRO" lazy="true">
+		<id name="id" column="ID_PARAMETRO" type="java.lang.Long">
+			<generator class="native"/>
+		</id>
+		<property name="indice"			type="java.lang.Integer" column="INDICE"/>	
+		<property name="cuitEmpresa" 	type="java.lang.String"  column="CUIT_EMPRESA"/>	
+		<property name="nombreEmpresa"	type="java.lang.String"  column="NOMBRE_EMPRESA"/>	
+		<property name="moneda"			type="java.lang.String"  column="MONEDA"/>
+		<property name="ultimoServicio"	type="java.lang.Integer" column="ULT_SERVICIO"/>
+	</class>
+	<query name="ParametroBean.getAll">
+        <![CDATA[from ParametroBean p order by p.id]]>
+    </query>
+</hibernate-mapping>

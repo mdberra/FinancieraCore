@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping SYSTEM "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+
+<hibernate-mapping package="com.financiera.domain.bean">
+	<class name="PermisoBean" table="Permiso" lazy="true">
+		<id name="id" column="ID_PERMISO" type="java.lang.Long">
+			<generator class="native"/>
+		</id>
+		<property name="codigo"		 type="java.lang.String" column="CODIGO"/>	
+	</class>
+	<query name="PermisoBean.getAll">
+        <![CDATA[from PermisoBean p order by p.id]]>
+    </query>
+   	<query name="PermisoBean.findById">
+        <![CDATA[from PermisoBean p where p.id = :id]]>
+    </query>
+</hibernate-mapping>

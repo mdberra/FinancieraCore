@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping SYSTEM "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+
+<hibernate-mapping package="com.financiera.domain.bean">
+	<class name="DiasCobroBean" table="DIAS_COBRO" lazy="true">
+		<id name="id" column="ID_DIASCOBRO" type="java.lang.Long">
+			<generator class="native"/>
+		</id>
+		<property name="idDelegacion" type="java.lang.Long"	column="ID_DELEGACION"/>
+		<many-to-one name="delegacion" column="ID_DELEGACION" class="DelegacionBean" update="false" insert="false" />
+		<property name="fechaDisparo" type="java.util.Date"	column="FECHA_DISPARO"/>	
+	</class>
+	<query name="DiasCobroBean.getAll">
+        <![CDATA[from DiasCobroBean d order by d.idDelegacion]]>
+    </query>
+   	<query name="DiasCobroBean.findByDelegacion">
+        <![CDATA[from DiasCobroBean d where d.idDelegacion = :idDelegacion order by d.fechaDisparo]]>
+    </query>
+</hibernate-mapping>

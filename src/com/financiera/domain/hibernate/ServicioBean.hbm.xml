@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping SYSTEM "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+
+<hibernate-mapping package="com.financiera.domain.bean">
+	<class name="ServicioBean" table="SERVICIO" lazy="true">
+		<id name="id" column="ID_SERVICIO" type="java.lang.Long">
+			<generator class="native"/>
+		</id>
+		<many-to-one name="cliente"  column="ID_CLIENTE"  class="ClienteBean"  update="true" insert="true" />
+		<many-to-one name="producto" column="ID_PRODUCTO" class="ProductoBean" update="true" insert="true"/>
+		<property name="importeTotal"  type="java.lang.Double" column="IMPORTE_TOTAL"/>
+		<property name="cantCuota"	   type="java.lang.Integer" column="CANT_CUOTA"/>
+		<property name="importeCuota"  type="java.lang.Double" column="IMPORTE_CUOTA"/>
+		<many-to-one name="vendedor" column="ID_VENDEDOR" class="VendedorBean" update="true" insert="true" />
+		<property name="comision"  type="java.lang.Double" column="COMISION"/>	
+
+		<property name="fechaVenta"  type="java.util.Date" column="FECHA_VENTA"/>	
+				
+		<property name="perPrimerDisparo" type="java.lang.Integer" column="PER_PRIMER_DISPARO"/>	
+
+		<property name="ultCuotaDebitada" type="java.lang.Integer" column="ULT_CUOTA_DEBITADA"/>	
+
+		<property name="estado" type="java.lang.String" column="ESTADO"/>	
+
+		<property name="motivo" type="java.lang.String" column="MOTIVO"/>
+		
+		<property name="fechaIngreso"  type="java.util.Date" column="FECHA_INGRESO"/>	
+
+		<property name="ultFechaConMovimientos"  type="java.util.Date" column="ULT_F_CON_MOV"/>	
+		
+		<property name="contId"  type="java.lang.Long"  column="CONT_ID"/>
+	</class>
+	<query name="ServicioBean.getAll">
+        <![CDATA[from ServicioBean s order by s.id]]>
+    </query>
+   	<query name="ServicioBean.getId">
+        <![CDATA[from ServicioBean s where s.id = :id]]>
+    </query>
+   	<query name="ServicioBean.getCliente">
+        <![CDATA[from ServicioBean s where s.cliente = :idCliente]]>
+    </query>
+    <query name="ServicioBean.getByFechaIngresoOrderVendedor">
+        <![CDATA[from ServicioBean s where s.fechaIngreso >= :fDesde and s.fechaIngreso <= :fHasta order by vendedor asc, fechaIngreso asc]]>
+    </query>
+   	<query name="ServicioBean.getByFechaVentaOrderFecha">
+        <![CDATA[from ServicioBean s where s.fechaVenta >= :fDesde and s.fechaVenta <= :fHasta order by fechaVenta asc]]>
+    </query>
+   	<query name="ServicioBean.getDivididos">
+        <![CDATA[from ServicioBean s where s.estado = :estado]]>
+    </query>
+</hibernate-mapping>

@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping SYSTEM "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+
+<hibernate-mapping package="com.financiera.domain.bean">
+	<class name="LocalizacionBean" table="LOCALIZACION" lazy="true">
+		<id name="id" column="ID_LOCALIZACION" type="java.lang.Long">
+			<generator class="native"/>
+		</id>
+		<property name="calle"		type="java.lang.String"	column="CALLE"/>
+		<property name="nro"		type="java.lang.String" column="NRO"/>
+		<property name="piso" 		type="java.lang.String" column="PISO"/>
+		<property name="depto"		type="java.lang.String"	column="DEPTO"/>
+		<property name="telefLinea"	type="java.lang.String"	column="TELEF_LINEA"/>
+		<property name="telefCelular" type="java.lang.String"	column="TELEF_CELULAR"/>
+		<property name="codPostal"	type="java.lang.String"	column="COD_POSTAL"/>
+		<property name="barrio"		type="java.lang.String"	column="BARRIO"/>
+		<property name="localidad"	type="java.lang.String"	column="LOCALIDAD"/>
+		<property name="provincia"	type="java.lang.String"	column="PROVINCIA"/>
+		<property name="pais"		type="java.lang.String"	column="PAIS"/>
+	</class>
+	<query name="LocalizacionBean.getAll">
+        <![CDATA[from LocalizacionBean l order by l.id]]>
+    </query>
+   	<query name="LocalizacionBean.findById">
+        <![CDATA[from LocalizacionBean b where b.id = :id]]>
+    </query>
+</hibernate-mapping>

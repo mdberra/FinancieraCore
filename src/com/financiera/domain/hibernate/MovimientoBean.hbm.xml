@@ -1,0 +1,76 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping SYSTEM "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+
+<hibernate-mapping package="com.financiera.domain.bean">
+	<class name="MovimientoBean" table="MOVIMIENTO" lazy="true">
+		<id name="id" column="ID_MOVIMIENTO" type="java.lang.Long">
+			<generator class="native"/>
+		</id>
+		<property name="idCliente" 		column="ID_CLIENTE" 	type="java.lang.Long"/>
+		<many-to-one name="cliente"		column="ID_CLIENTE"		class="ClienteBean"		update="false" insert="false"/>
+
+	 	<property name="idServicio" 	column="ID_SERVICIO" 	type="java.lang.Long"/>
+
+		<property name="fecha"		 type="java.util.Date"    column="FECHA"/>
+		<property name="importe"	 type="java.lang.Double"  column="IMPORTE"/>
+		<property name="descripcion" type="java.lang.String"  column="DESCRIPCION"/>
+		<property name="nroCuota"	 type="java.lang.Integer" column="NRO_CUOTA"/>
+		<property name="totalCuotas" type="java.lang.Integer" column="TOTAL_CUOTA"/>
+		<many-to-one name="estado"   column="ID_ESTADO" class="EstadoMovBean" update="true" insert="true"/>
+		<many-to-one name="disparo"  column="ID_DISPARO" class="DisparoBean" update="true" insert="true"/>
+	</class>
+	<query name="MovimientoBean.findByPendDisparo">
+        <![CDATA[from MovimientoBean m where m.estado = :estado order by m.idCliente asc, m.fecha asc, m.importe asc]]>
+    </query>
+   	<query name="MovimientoBean.findByPendDisparoFecha">
+        <![CDATA[from MovimientoBean m where m.idCliente = :idCliente and m.estado = :estado and m.fecha = :fecha]]>
+    </query>
+   	<query name="MovimientoBean.findByPendClienteEstado">
+        <![CDATA[from MovimientoBean m where m.idCliente = :idCliente and m.estado = :estado]]>
+    </query>
+   	<query name="MovimientoBean.findByPendDisparoEstado">
+        <![CDATA[from MovimientoBean m where m.idCliente = :idCliente and m.idServicio = :idServicio and (m.estado = :estado1 or m.estado = :estado2 or m.estado = :estado3) and m.fecha <= :fecha]]>
+    </query>
+	<query name="MovimientoBean.findByMovClienteRespondido">
+        <![CDATA[from MovimientoBean m where m.idCliente = :idCliente and m.estado > 2]]>
+    </query>
+   	<query name="MovimientoBean.getAll">
+        <![CDATA[from MovimientoBean m order by m.idCliente asc, m.fecha asc]]>
+    </query>
+   	<query name="MovimientoBean.getAllbyCliente">
+        <![CDATA[from MovimientoBean m where m.idCliente = :idCliente order by m.idServicio asc, m.fecha asc]]>
+    </query>
+   	<query name="MovimientoBean.getAllbyServicio">
+        <![CDATA[from MovimientoBean m where m.idServicio = :idServicio order by m.fecha asc]]>
+    </query>
+    <query name="MovimientoBean.findByClienteDisparado">
+        <![CDATA[from MovimientoBean m where m.idCliente = :idCliente and m.estado = :estado order by m.idServicio asc, m.fecha asc]]>
+    </query>
+	<query name="MovimientoBean.findByMovConRespuesta">
+        <![CDATA[from MovimientoBean m where m.estado > 2 and m.fecha > :fecha1 and m.fecha < :fecha2 order by m.idCliente asc, m.idServicio asc, m.fecha asc]]>
+    </query>
+    <query name="MovimientoBean.findByMovFechaMayor">
+        <![CDATA[from MovimientoBean m where m.estado > 2 and m.fecha >= :fecha order by m.idCliente asc, m.idServicio asc, m.fecha asc]]>
+    </query>
+    <query name="MovimientoBean.findByServicio">
+        <![CDATA[from MovimientoBean m where m.idServicio = :idServicio order by m.fecha asc]]>
+    </query>
+    <query name="MovimientoBean.findByFecha">
+        <![CDATA[from MovimientoBean m where m.fecha >= :fDesde and m.fecha <= :fHasta order by m.fecha asc]]>
+    </query>
+    <query name="MovimientoBean.findOrderServicio">
+        <![CDATA[from MovimientoBean m where  m.fecha >= :fDesde and (m.estado = :estado1 or m.estado = :estado2) order by m.idServicio asc, m.fecha asc]]>
+    </query>
+    <query name="MovimientoBean.findEstado38">
+        <![CDATA[from MovimientoBean m where  m.estado = 38]]>
+    </query>
+    <query name="MovimientoBean.findEstadoyRangoFecha">
+        <![CDATA[from MovimientoBean m where  m.fecha >= :fDesde and m.fecha <= :fHasta and m.estado = :estado order by m.idCliente asc, m.fecha asc]]>
+    </query>
+        <query name="MovimientoBean.getMovimientoFindEstado">
+        <![CDATA[from MovimientoBean m where m.estado = :estado1 or m.estado = :estado2]]>
+    </query>
+<!--     <query name="MovimientoBean.getMovimientoByDescripcion">
+        <![CDATA[from MovimientoBean m where m.descripcion = :descripcion]]>
+    </query>  -->
+</hibernate-mapping>

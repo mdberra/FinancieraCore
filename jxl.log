@@ -1,0 +1,508 @@
+2019-03-20 17:05:48,601 [INFO ] org.hibernate.cfg.Environment  - Hibernate 3.2 cr4
+2019-03-20 17:05:48,836 [INFO ] org.hibernate.cfg.Environment  - hibernate.properties not found
+2019-03-20 17:05:48,906 [INFO ] org.hibernate.cfg.Environment  - Bytecode provider name : cglib
+2019-03-20 17:05:49,278 [INFO ] org.hibernate.cfg.Environment  - using JDK 1.4 java.sql.Timestamp handling
+2019-03-20 17:05:51,866 [INFO ] org.hibernate.cfg.Configuration  - configuring from resource: com/financiera/core/conf/hibernate.cfg.xml
+2019-03-20 17:05:51,867 [INFO ] org.hibernate.cfg.Configuration  - Configuration resource: com/financiera/core/conf/hibernate.cfg.xml
+2019-03-20 17:05:53,516 [DEBUG] org.hibernate.util.DTDEntityResolver  - trying to resolve system-id [http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd]
+2019-03-20 17:05:53,517 [DEBUG] org.hibernate.util.DTDEntityResolver  - recognized hibernate namespace; attempting to resolve on classpath under org/hibernate/
+2019-03-20 17:05:53,590 [DEBUG] org.hibernate.util.DTDEntityResolver  - located [http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd] in classpath
+2019-03-20 17:05:54,580 [DEBUG] org.hibernate.cfg.Configuration  - dialect=org.hibernate.dialect.MySQLDialect
+2019-03-20 17:05:54,581 [DEBUG] org.hibernate.cfg.Configuration  - connection.driver_class=com.mysql.jdbc.Driver
+2019-03-20 17:05:54,582 [DEBUG] org.hibernate.cfg.Configuration  - connection.url=jdbc:mysql://localhost:3306/financiera?useSSL=false
+2019-03-20 17:05:54,583 [DEBUG] org.hibernate.cfg.Configuration  - connection.username=root
+2019-03-20 17:05:54,584 [DEBUG] org.hibernate.cfg.Configuration  - connection.password=mdbroot
+2019-03-20 17:05:54,585 [DEBUG] org.hibernate.cfg.Configuration  - cache.provider_class=org.hibernate.cache.NoCacheProvider
+2019-03-20 17:05:54,586 [DEBUG] org.hibernate.cfg.Configuration  - cache.use_query_cache=false
+2019-03-20 17:05:54,587 [DEBUG] org.hibernate.cfg.Configuration  - cache.use_minimal_puts=false
+2019-03-20 17:05:54,588 [DEBUG] org.hibernate.cfg.Configuration  - max_fetch_depth=3
+2019-03-20 17:05:54,589 [DEBUG] org.hibernate.cfg.Configuration  - show_sql=false
+2019-03-20 17:05:54,590 [DEBUG] org.hibernate.cfg.Configuration  - format_sql=false
+2019-03-20 17:05:54,591 [DEBUG] org.hibernate.cfg.Configuration  - hbm2ddl.auto=update
+2019-03-20 17:05:54,592 [DEBUG] org.hibernate.cfg.Configuration  - current_session_context_class=thread
+2019-03-20 17:05:54,593 [DEBUG] org.hibernate.cfg.Configuration  - order_updates=true
+2019-03-20 17:05:54,594 [DEBUG] org.hibernate.cfg.Configuration  - hibernate.transaction.flush_before_completion=true
+2019-03-20 17:05:54,601 [DEBUG] org.hibernate.cfg.Configuration  - null<-org.dom4j.tree.DefaultAttribute@306cf3ea [Attribute: name resource value "com/financiera/domain/hibernate/ParametroBean.hbm.xml"]
+2019-03-20 17:05:54,602 [INFO ] org.hibernate.cfg.Configuration  - Reading mappings from resource: com/financiera/domain/hibernate/ParametroBean.hbm.xml
+2019-03-20 17:05:54,693 [DEBUG] org.hibernate.util.DTDEntityResolver  - trying to resolve system-id [http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd]
+2019-03-20 17:05:54,693 [DEBUG] org.hibernate.util.DTDEntityResolver  - recognized hibernate namespace; attempting to resolve on classpath under org/hibernate/
+2019-03-20 17:05:54,759 [DEBUG] org.hibernate.util.DTDEntityResolver  - located [http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd] in classpath
+2019-03-20 17:05:58,465 [INFO ] org.hibernate.cfg.HbmBinder  - Mapping class: com.financiera.domain.bean.ParametroBean -> PARAMETRO
+2019-03-20 17:05:58,654 [DEBUG] org.hibernate.cfg.HbmBinder  - Mapped property: id -> ID_PARAMETRO
+2019-03-20 17:05:58,964 [DEBUG] org.hibernate.cfg.HbmBinder  - Mapped property: indice -> INDICE
+2019-03-20 17:05:58,969 [DEBUG] org.hibernate.cfg.HbmBinder  - Mapped property: cuitEmpresa -> CUIT_EMPRESA
+2019-03-20 17:05:58,975 [DEBUG] org.hibernate.cfg.HbmBinder  - Mapped property: nombreEmpresa -> NOMBRE_EMPRESA
+2019-03-20 17:05:58,981 [DEBUG] org.hibernate.cfg.HbmBinder  - Mapped property: moneda -> MONEDA
+2019-03-20 17:05:58,986 [DEBUG] org.hibernate.cfg.HbmBinder  - Mapped property: ultimoServicio -> ULT_SERVICIO
+2019-03-20 17:05:58,987 [DEBUG] org.hibernate.cfg.HbmBinder  - Named query: ParametroBean.getAll -> 
+        from ParametroBean p order by p.id
+    
+2019-03-20 17:05:59,021 [DEBUG] org.hibernate.cfg.Configuration  - null<-org.dom4j.tree.DefaultAttribute@156b88f5 [Attribute: name resource value "com/financiera/domain/hibernate/LocalizacionBean.hbm.xml"]
+2019-03-20 17:05:59,022 [INFO ] org.hibernate.cfg.Configuration  - Reading mappings from resource: com/financiera/domain/hibernate/LocalizacionBean.hbm.xml
+2019-03-20 17:05:59,114 [DEBUG] org.hibernate.util.DTDEntityResolver  - trying to resolve system-id [http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd]
+2019-03-20 17:05:59,115 [DEBUG] org.hibernate.util.DTDEntityResolver  - recognized hibernate namespace; attempting to resolve on classpath under org/hibernate/
+2019-03-20 17:05:59,124 [DEBUG] org.hibernate.util.DTDEntityResolver  - located [http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd] in classpath
+2019-03-20 17:06:00,061 [INFO ] org.hibernate.cfg.HbmBinder  - Mapping class: com.financiera.domain.bean.LocalizacionBean -> LOCALIZACION
+2019-03-20 17:06:00,066 [DEBUG] org.hibernate.cfg.HbmBinder  - Mapped property: id -> ID_LOCALIZACION
+2019-03-20 17:06:00,073 [DEBUG] org.hibernate.cfg.HbmBinder  - Mapped property: calle -> CALLE
+2019-03-20 17:06:00,079 [DEBUG] org.hibernate.cfg.HbmBinder  - Mapped property: nro -> NRO
+2019-03-20 17:06:00,084 [DEBUG] org.hibernate.cfg.HbmBinder  - Mapped property: piso -> PISO
+2019-03-20 17:06:00,089 [DEBUG] org.hibernate.cfg.HbmBinder  - Mapped property: depto -> DEPTO
+2019-03-20 17:06:00,095 [DEBUG] org.hibernate.cfg.HbmBinder  - Mapped property: telefLinea -> TELEF_LINEA
+2019-03-20 17:06:00,100 [DEBUG] org.hibernate.cfg.HbmBinder  - Mapped property: telefCelular -> TELEF_CELULAR
+2019-03-20 17:06:00,106 [DEBUG] org.hibernate.cfg.HbmBinder  - Mapped property: codPostal -> COD_POSTAL
+2019-03-20 17:06:00,111 [DEBUG] org.hibernate.cfg.HbmBinder  - Mapped property: barrio -> BARRIO
+2019-03-20 17:06:00,117 [DEBUG] org.hibernate.cfg.HbmBinder  - Mapped property: localidad -> LOCALIDAD
+2019-03-20 17:06:00,122 [DEBUG] org.hibernate.cfg.HbmBinder  - Mapped property: provincia -> PROVINCIA
+2019-03-20 17:06:00,128 [DEBUG] org.hibernate.cfg.HbmBinder  - Mapped property: pais -> PAIS
+2019-03-20 17:06:00,129 [DEBUG] org.hibernate.cfg.HbmBinder  - Named query: LocalizacionBean.getAll -> 
+        from LocalizacionBean l order by l.id
+    
+2019-03-20 17:06:00,131 [DEBUG] org.hibernate.cfg.HbmBinder  - Named query: LocalizacionBean.findById -> 
+        from LocalizacionBean b where b.id = :id
+    
+2019-03-20 17:06:00,132 [DEBUG] org.hibernate.cfg.Configuration  - null<-org.dom4j.tree.DefaultAttribute@383bfa16 [Attribute: name resource value "com/financiera/domain/hibernate/BancoBean.hbm.xml"]
+2019-03-20 17:06:00,133 [INFO ] org.hibernate.cfg.Configuration  - Reading mappings from resource: com/financiera/domain/hibernate/BancoBean.hbm.xml
+2019-03-20 17:06:00,222 [DEBUG] org.hibernate.util.DTDEntityResolver  - trying to resolve system-id [http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd]
+2019-03-20 17:06:00,222 [DEBUG] org.hibernate.util.DTDEntityResolver  - recognized hibernate namespace; attempting to resolve on classpath under org/hibernate/
+2019-03-20 17:06:00,232 [DEBUG] org.hibernate.util.DTDEntityResolver  - located [http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd] in classpath
+2019-03-20 17:06:01,147 [INFO ] org.hibernate.cfg.HbmBinder  - Mapping class: com.financiera.domain.bean.BancoBean -> BANCO
+2019-03-20 17:06:01,152 [DEBUG] org.hibernate.cfg.HbmBinder  - Mapped property: id -> ID_BANCO
+2019-03-20 17:06:01,159 [DEBUG] org.hibernate.cfg.HbmBinder  - Mapped property: codigo -> CODIGO
+2019-03-20 17:06:01,164 [DEBUG] org.hibernate.cfg.HbmBinder  - Mapped property: descripcion -> DESCRIPCION
+2019-03-20 17:06:04,176 [DEBUG] org.hibernate.cfg.HbmBinder  - Mapped property: localizacion -> ID_LOCALIZACION
+2019-03-20 17:06:04,182 [DEBUG] org.hibernate.cfg.HbmBinder  - Mapped property: codigoDebito -> CODIGO_DEBITO
+2019-03-20 17:06:04,188 [DEBUG] org.hibernate.cfg.HbmBinder  - Mapped property: descripPrestacion -> DESCRIP_PRESTACION
+2019-03-20 17:06:04,194 [DEBUG] org.hibernate.cfg.HbmBinder  - Mapped property: bancoRecaudador -> BANCO_RECAUDADOR
+2019-03-20 17:06:04,195 [DEBUG] org.hibernate.cfg.HbmBinder  - Named query: BancoBean.getAll -> 
+        from BancoBean b order by b.id
+    
+2019-03-20 17:06:04,197 [DEBUG] org.hibernate.cfg.HbmBinder  - Named query: BancoBean.getAllOrderDescripcion -> 
+        from BancoBean b order by b.descripcion
+    
+2019-03-20 17:06:04,198 [DEBUG] org.hibernate.cfg.HbmBinder  - Named query: BancoBean.findById -> 
+        from BancoBean b where b.id = :id
+    
+2019-03-20 17:06:04,200 [DEBUG] org.hibernate.cfg.Configuration  - null<-org.dom4j.tree.DefaultAttribute@60099951 [Attribute: name resource value "com/financiera/domain/hibernate/VendedorBean.hbm.xml"]
+2019-03-20 17:06:04,201 [INFO ] org.hibernate.cfg.Configuration  - Reading mappings from resource: com/financiera/domain/hibernate/VendedorBean.hbm.xml
+2019-03-20 17:06:04,294 [DEBUG] org.hibernate.util.DTDEntityResolver  - trying to resolve system-id [http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd]
+2019-03-20 17:06:04,295 [DEBUG] org.hibernate.util.DTDEntityResolver  - recognized hibernate namespace; attempting to resolve on classpath under org/hibernate/
+2019-03-20 17:06:04,304 [DEBUG] org.hibernate.util.DTDEntityResolver  - located [http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd] in classpath
+2019-03-20 17:06:05,310 [INFO ] org.hibernate.cfg.HbmBinder  - Mapping class: com.financiera.domain.bean.VendedorBean -> VENDEDOR
+2019-03-20 17:06:05,315 [DEBUG] org.hibernate.cfg.HbmBinder  - Mapped property: id -> ID_VENDEDOR
+2019-03-20 17:06:05,321 [DEBUG] org.hibernate.cfg.HbmBinder  - Mapped property: codigo -> CODIGO
+2019-03-20 17:06:05,327 [DEBUG] org.hibernate.cfg.HbmBinder  - Mapped property: nombre -> NOMBRE
+2019-03-20 17:06:05,332 [DEBUG] org.hibernate.cfg.HbmBinder  - Mapped property: utilizar -> UTILIZAR
+2019-03-20 17:06:05,334 [DEBUG] org.hibernate.cfg.HbmBinder  - Named query: VendedorBean.getAll -> 
+        from VendedorBean v order by v.id
+    
+2019-03-20 17:06:05,335 [DEBUG] org.hibernate.cfg.HbmBinder  - Named query: VendedorBean.findById -> 
+        from VendedorBean v where v.id = :id
+    
+2019-03-20 17:06:05,337 [DEBUG] org.hibernate.cfg.Configuration  - null<-org.dom4j.tree.DefaultAttribute@1a6d8329 [Attribute: name resource value "com/financiera/domain/hibernate/ProductoBean.hbm.xml"]
+2019-03-20 17:06:05,338 [INFO ] org.hibernate.cfg.Configuration  - Reading mappings from resource: com/financiera/domain/hibernate/ProductoBean.hbm.xml
+2019-03-20 17:06:05,423 [DEBUG] org.hibernate.util.DTDEntityResolver  - trying to resolve system-id [http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd]
+2019-03-20 17:06:05,424 [DEBUG] org.hibernate.util.DTDEntityResolver  - recognized hibernate namespace; attempting to resolve on classpath under org/hibernate/
+2019-03-20 17:06:05,433 [DEBUG] org.hibernate.util.DTDEntityResolver  - located [http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd] in classpath
+2019-03-20 17:06:06,452 [INFO ] org.hibernate.cfg.HbmBinder  - Mapping class: com.financiera.domain.bean.ProductoBean -> PRODUCTO
+2019-03-20 17:06:06,457 [DEBUG] org.hibernate.cfg.HbmBinder  - Mapped property: id -> ID_PRODUCTO
+2019-03-20 17:06:06,464 [DEBUG] org.hibernate.cfg.HbmBinder  - Mapped property: codigo -> CODIGO
+2019-03-20 17:06:06,469 [DEBUG] org.hibernate.cfg.HbmBinder  - Mapped property: descripcion -> DESCRIPCION
+2019-03-20 17:06:06,475 [DEBUG] org.hibernate.cfg.HbmBinder  - Mapped property: estado -> ESTADO
+2019-03-20 17:06:06,476 [DEBUG] org.hibernate.cfg.HbmBinder  - Named query: ProductoBean.getAll -> 
+        from ProductoBean p order by p.id
+    
+2019-03-20 17:06:06,478 [DEBUG] org.hibernate.cfg.HbmBinder  - Named query: ProductoBean.findById -> 
+        from ProductoBean p where p.id = :id
+    
+2019-03-20 17:06:06,480 [DEBUG] org.hibernate.cfg.Configuration  - null<-org.dom4j.tree.DefaultAttribute@738dc9b [Attribute: name resource value "com/financiera/domain/hibernate/EntidadBean.hbm.xml"]
+2019-03-20 17:06:06,481 [INFO ] org.hibernate.cfg.Configuration  - Reading mappings from resource: com/financiera/domain/hibernate/EntidadBean.hbm.xml
+2019-03-20 17:06:06,583 [DEBUG] org.hibernate.util.DTDEntityResolver  - trying to resolve system-id [http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd]
+2019-03-20 17:06:06,584 [DEBUG] org.hibernate.util.DTDEntityResolver  - recognized hibernate namespace; attempting to resolve on classpath under org/hibernate/
+2019-03-20 17:06:06,594 [DEBUG] org.hibernate.util.DTDEntityResolver  - located [http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd] in classpath
+2019-03-20 17:06:07,494 [INFO ] org.hibernate.cfg.HbmBinder  - Mapping class: com.financiera.domain.bean.EntidadBean -> ENTIDAD
+2019-03-20 17:06:07,499 [DEBUG] org.hibernate.cfg.HbmBinder  - Mapped property: id -> ID_ENTIDAD
+2019-03-20 17:06:07,506 [DEBUG] org.hibernate.cfg.HbmBinder  - Mapped property: codigo -> CODIGO
+2019-03-20 17:06:07,512 [DEBUG] org.hibernate.cfg.HbmBinder  - Mapped property: descripcion -> DESCRIPCION
+2019-03-20 17:06:07,513 [DEBUG] org.hibernate.cfg.HbmBinder  - Named query: EntidadBean.getAll -> 
+        from EntidadBean e order by e.id
+    
+2019-03-20 17:06:07,515 [DEBUG] org.hibernate.cfg.HbmBinder  - Named query: EntidadBean.findById -> 
+        from EntidadBean b where b.id = :id
+    
+2019-03-20 17:06:07,517 [DEBUG] org.hibernate.cfg.Configuration  - null<-org.dom4j.tree.DefaultAttribute@d86a6f [Attribute: name resource value "com/financiera/domain/hibernate/DelegacionBean.hbm.xml"]
+2019-03-20 17:06:07,518 [INFO ] org.hibernate.cfg.Configuration  - Reading mappings from resource: com/financiera/domain/hibernate/DelegacionBean.hbm.xml
+2019-03-20 17:06:07,615 [DEBUG] org.hibernate.util.DTDEntityResolver  - trying to resolve system-id [http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd]
+2019-03-20 17:06:07,616 [DEBUG] org.hibernate.util.DTDEntityResolver  - recognized hibernate namespace; attempting to resolve on classpath under org/hibernate/
+2019-03-20 17:06:07,626 [DEBUG] org.hibernate.util.DTDEntityResolver  - located [http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd] in classpath
+2019-03-20 17:06:08,680 [INFO ] org.hibernate.cfg.HbmBinder  - Mapping class: com.financiera.domain.bean.DelegacionBean -> DELEGACION
+2019-03-20 17:06:08,686 [DEBUG] org.hibernate.cfg.HbmBinder  - Mapped property: id -> ID_DELEGACION
+2019-03-20 17:06:08,694 [DEBUG] org.hibernate.cfg.HbmBinder  - Mapped property: codigo -> CODIGO
+2019-03-20 17:06:08,701 [DEBUG] org.hibernate.cfg.HbmBinder  - Mapped property: descripcion -> DESCRIPCION
+2019-03-20 17:06:08,706 [DEBUG] org.hibernate.cfg.HbmBinder  - Mapped property: f_alta -> FECHA_ALTA
+2019-03-20 17:06:08,717 [DEBUG] org.hibernate.cfg.HbmBinder  - Mapped property: localizacion -> ID_LOCALIZACION
+2019-03-20 17:06:08,726 [DEBUG] org.hibernate.cfg.HbmBinder  - Mapped property: entidad -> ID_ENTIDAD
+2019-03-20 17:06:08,736 [DEBUG] org.hibernate.cfg.HbmBinder  - Mapped property: banco -> ID_BANCO
+2019-03-20 17:06:08,741 [DEBUG] org.hibernate.cfg.HbmBinder  - Mapped property: utilizar -> UTILIZAR
+2019-03-20 17:06:08,743 [DEBUG] org.hibernate.cfg.HbmBinder  - Named query: DelegacionBean.getAll -> 
+        from DelegacionBean d order by d.id
+    
+2019-03-20 17:06:08,744 [DEBUG] org.hibernate.cfg.HbmBinder  - Named query: DelegacionBean.getAllOrderDescripcion -> 
+        from DelegacionBean d order by d.descripcion
+    
+2019-03-20 17:06:08,746 [DEBUG] org.hibernate.cfg.HbmBinder  - Named query: DelegacionBean.findById -> 
+        from DelegacionBean d where d.id = :id
+    
+2019-03-20 17:06:08,748 [DEBUG] org.hibernate.cfg.Configuration  - null<-org.dom4j.tree.DefaultAttribute@750e2b97 [Attribute: name resource value "com/financiera/domain/hibernate/DiasCobroBean.hbm.xml"]
+2019-03-20 17:06:08,749 [INFO ] org.hibernate.cfg.Configuration  - Reading mappings from resource: com/financiera/domain/hibernate/DiasCobroBean.hbm.xml
+2019-03-20 17:06:08,845 [DEBUG] org.hibernate.util.DTDEntityResolver  - trying to resolve system-id [http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd]
+2019-03-20 17:06:08,846 [DEBUG] org.hibernate.util.DTDEntityResolver  - recognized hibernate namespace; attempting to resolve on classpath under org/hibernate/
+2019-03-20 17:06:08,856 [DEBUG] org.hibernate.util.DTDEntityResolver  - located [http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd] in classpath
+2019-03-20 17:06:09,848 [INFO ] org.hibernate.cfg.HbmBinder  - Mapping class: com.financiera.domain.bean.DiasCobroBean -> DIAS_COBRO
+2019-03-20 17:06:09,853 [DEBUG] org.hibernate.cfg.HbmBinder  - Mapped property: id -> ID_DIASCOBRO
+2019-03-20 17:06:09,860 [DEBUG] org.hibernate.cfg.HbmBinder  - Mapped property: idDelegacion -> ID_DELEGACION
+2019-03-20 17:06:09,870 [DEBUG] org.hibernate.cfg.HbmBinder  - Mapped property: delegacion -> ID_DELEGACION
+2019-03-20 17:06:09,876 [DEBUG] org.hibernate.cfg.HbmBinder  - Mapped property: fechaDisparo -> FECHA_DISPARO
+2019-03-20 17:06:09,877 [DEBUG] org.hibernate.cfg.HbmBinder  - Named query: DiasCobroBean.getAll -> 
+        from DiasCobroBean d order by d.idDelegacion
+    
+2019-03-20 17:06:09,878 [DEBUG] org.hibernate.cfg.HbmBinder  - Named query: DiasCobroBean.findByDelegacion -> 
+        from DiasCobroBean d where d.idDelegacion = :idDelegacion order by d.fechaDisparo
+    
+2019-03-20 17:06:09,880 [DEBUG] org.hibernate.cfg.Configuration  - null<-org.dom4j.tree.DefaultAttribute@298a5e20 [Attribute: name resource value "com/financiera/domain/hibernate/ClienteBean.hbm.xml"]
+2019-03-20 17:06:09,881 [INFO ] org.hibernate.cfg.Configuration  - Reading mappings from resource: com/financiera/domain/hibernate/ClienteBean.hbm.xml
+2019-03-20 17:06:09,988 [DEBUG] org.hibernate.util.DTDEntityResolver  - trying to resolve system-id [http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd]
+2019-03-20 17:06:09,988 [DEBUG] org.hibernate.util.DTDEntityResolver  - recognized hibernate namespace; attempting to resolve on classpath under org/hibernate/
+2019-03-20 17:06:09,998 [DEBUG] org.hibernate.util.DTDEntityResolver  - located [http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd] in classpath
+2019-03-20 17:06:11,044 [INFO ] org.hibernate.cfg.HbmBinder  - Mapping class: com.financiera.domain.bean.ClienteBean -> CLIENTE
+2019-03-20 17:06:11,050 [DEBUG] org.hibernate.cfg.HbmBinder  - Mapped property: id -> ID_CLIENTE
+2019-03-20 17:06:11,060 [DEBUG] org.hibernate.cfg.HbmBinder  - Mapped property: tipoDoc -> TIPO_DOC
+2019-03-20 17:06:11,066 [DEBUG] org.hibernate.cfg.HbmBinder  - Mapped property: nroDoc -> NRO_DOC
+2019-03-20 17:06:11,073 [DEBUG] org.hibernate.cfg.HbmBinder  - Mapped property: cbu -> CBU
+2019-03-20 17:06:11,080 [DEBUG] org.hibernate.cfg.HbmBinder  - Mapped property: sucursalCA -> CA_SUCURSAL
+2019-03-20 17:06:11,087 [DEBUG] org.hibernate.cfg.HbmBinder  - Mapped property: nroCA -> CA_NRO
+2019-03-20 17:06:11,093 [DEBUG] org.hibernate.cfg.HbmBinder  - Mapped property: nombre -> NOMBRE
+2019-03-20 17:06:11,100 [DEBUG] org.hibernate.cfg.HbmBinder  - Mapped property: apellido -> APELLIDO
+2019-03-20 17:06:11,108 [DEBUG] org.hibernate.cfg.HbmBinder  - Mapped property: fechaIngreso -> F_INGRESO
+2019-03-20 17:06:11,120 [DEBUG] org.hibernate.cfg.HbmBinder  - Mapped property: locParticular -> ID_LOC_PARTICULAR
+2019-03-20 17:06:11,131 [DEBUG] org.hibernate.cfg.HbmBinder  - Mapped property: locLaboral -> ID_LOC_LABORAL
+2019-03-20 17:06:11,142 [DEBUG] org.hibernate.cfg.HbmBinder  - Mapped property: locInformado -> ID_LOC_INFORMADO
+2019-03-20 17:06:11,149 [DEBUG] org.hibernate.cfg.HbmBinder  - Mapped property: idDelegacion -> ID_DELEGACION
+2019-03-20 17:06:11,161 [DEBUG] org.hibernate.cfg.HbmBinder  - Mapped property: delegacion -> ID_DELEGACION
+2019-03-20 17:06:11,169 [DEBUG] org.hibernate.cfg.HbmBinder  - Mapped property: estado -> ESTADO
+2019-03-20 17:06:11,177 [DEBUG] org.hibernate.cfg.HbmBinder  - Mapped property: fechaEstado -> F_ESTADO
+2019-03-20 17:06:11,185 [DEBUG] org.hibernate.cfg.HbmBinder  - Mapped property: estadoAnterior -> ESTADO_ANTERIOR
+2019-03-20 17:06:11,194 [DEBUG] org.hibernate.cfg.HbmBinder  - Mapped property: comentarios -> COMENTARIOS
+2019-03-20 17:06:11,297 [DEBUG] org.hibernate.cfg.HbmBinder  - Mapped property: servicios
+2019-03-20 17:06:11,305 [DEBUG] org.hibernate.cfg.HbmBinder  - Mapped property: movimientos
+2019-03-20 17:06:11,306 [DEBUG] org.hibernate.cfg.HbmBinder  - Named query: ClienteBean.getId -> 
+        from ClienteBean c where c.id = :id
+    
+2019-03-20 17:06:11,308 [DEBUG] org.hibernate.cfg.HbmBinder  - Named query: ClienteBean.getNroDoc -> 
+        from ClienteBean c where c.nroDoc = :nroDoc
+    
+2019-03-20 17:06:11,310 [DEBUG] org.hibernate.cfg.HbmBinder  - Named query: ClienteBean.getNroCA -> 
+        from ClienteBean c where c.nroCA = :nroCA
+    
+2019-03-20 17:06:11,312 [DEBUG] org.hibernate.cfg.HbmBinder  - Named query: ClienteBean.findByDelegacion -> 
+        from ClienteBean c where c.idDelegacion = :idDelegacion order by c.apellido asc
+    
+2019-03-20 17:06:11,314 [DEBUG] org.hibernate.cfg.HbmBinder  - Named query: ClienteBean.findByDelegacionEstado -> 
+        from ClienteBean c where c.idDelegacion = :idDelegacion and c.estado = :idEstado order by c.apellido asc
+    
+2019-03-20 17:06:11,316 [DEBUG] org.hibernate.cfg.HbmBinder  - Named query: ClienteBean.getAllbyDelegacion -> 
+        from ClienteBean c order by c.idDelegacion asc, c.apellido asc
+    
+2019-03-20 17:06:11,319 [DEBUG] org.hibernate.cfg.HbmBinder  - Named query: ClienteBean.getAll -> 
+        from ClienteBean c order by c.id
+    
+2019-03-20 17:06:11,321 [DEBUG] org.hibernate.cfg.HbmBinder  - Named query: ClienteBean.getAllbyApellido -> 
+        from ClienteBean c where c.apellido like :apellido order by c.apellido
+    
+2019-03-20 17:06:11,323 [DEBUG] org.hibernate.cfg.HbmBinder  - Named query: ClienteBean.getSucNroCA -> 
+        from ClienteBean c where c.sucursalCA = :sucCA and c.nroCA = :nroCA
+    
+2019-03-20 17:06:11,325 [DEBUG] org.hibernate.cfg.HbmBinder  - Named query: ClienteBean.clientesEstado -> 
+        from ClienteBean c where c.estado = :estado order by c.idDelegacion, c.tipoDoc, c.nroDoc
+    
+2019-03-20 17:06:11,327 [DEBUG] org.hibernate.cfg.Configuration  - null<-org.dom4j.tree.DefaultAttribute@2e8c1c9b [Attribute: name resource value "com/financiera/domain/hibernate/ServicioBean.hbm.xml"]
+2019-03-20 17:06:11,328 [INFO ] org.hibernate.cfg.Configuration  - Reading mappings from resource: com/financiera/domain/hibernate/ServicioBean.hbm.xml
+2019-03-20 17:06:11,447 [DEBUG] org.hibernate.util.DTDEntityResolver  - trying to resolve system-id [http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd]
+2019-03-20 17:06:11,448 [DEBUG] org.hibernate.util.DTDEntityResolver  - recognized hibernate namespace; attempting to resolve on classpath under org/hibernate/
+2019-03-20 17:06:11,463 [DEBUG] org.hibernate.util.DTDEntityResolver  - located [http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd] in classpath
+2019-03-20 17:06:12,669 [INFO ] org.hibernate.cfg.HbmBinder  - Mapping class: com.financiera.domain.bean.ServicioBean -> SERVICIO
+2019-03-20 17:06:12,675 [DEBUG] org.hibernate.cfg.HbmBinder  - Mapped property: id -> ID_SERVICIO
+2019-03-20 17:06:12,687 [DEBUG] org.hibernate.cfg.HbmBinder  - Mapped property: cliente -> ID_CLIENTE
+2019-03-20 17:06:12,698 [DEBUG] org.hibernate.cfg.HbmBinder  - Mapped property: producto -> ID_PRODUCTO
+2019-03-20 17:06:12,703 [DEBUG] org.hibernate.cfg.HbmBinder  - Mapped property: importeTotal -> IMPORTE_TOTAL
+2019-03-20 17:06:12,709 [DEBUG] org.hibernate.cfg.HbmBinder  - Mapped property: cantCuota -> CANT_CUOTA
+2019-03-20 17:06:12,715 [DEBUG] org.hibernate.cfg.HbmBinder  - Mapped property: importeCuota -> IMPORTE_CUOTA
+2019-03-20 17:06:12,725 [DEBUG] org.hibernate.cfg.HbmBinder  - Mapped property: vendedor -> ID_VENDEDOR
+2019-03-20 17:06:12,731 [DEBUG] org.hibernate.cfg.HbmBinder  - Mapped property: comision -> COMISION
+2019-03-20 17:06:12,737 [DEBUG] org.hibernate.cfg.HbmBinder  - Mapped property: fechaVenta -> FECHA_VENTA
+2019-03-20 17:06:12,743 [DEBUG] org.hibernate.cfg.HbmBinder  - Mapped property: perPrimerDisparo -> PER_PRIMER_DISPARO
+2019-03-20 17:06:12,749 [DEBUG] org.hibernate.cfg.HbmBinder  - Mapped property: ultCuotaDebitada -> ULT_CUOTA_DEBITADA
+2019-03-20 17:06:12,755 [DEBUG] org.hibernate.cfg.HbmBinder  - Mapped property: estado -> ESTADO
+2019-03-20 17:06:12,760 [DEBUG] org.hibernate.cfg.HbmBinder  - Mapped property: motivo -> MOTIVO
+2019-03-20 17:06:12,766 [DEBUG] org.hibernate.cfg.HbmBinder  - Mapped property: fechaIngreso -> FECHA_INGRESO
+2019-03-20 17:06:12,772 [DEBUG] org.hibernate.cfg.HbmBinder  - Mapped property: ultFechaConMovimientos -> ULT_F_CON_MOV
+2019-03-20 17:06:12,778 [DEBUG] org.hibernate.cfg.HbmBinder  - Mapped property: contId -> CONT_ID
+2019-03-20 17:06:12,779 [DEBUG] org.hibernate.cfg.HbmBinder  - Named query: ServicioBean.getAll -> 
+        from ServicioBean s order by s.id
+    
+2019-03-20 17:06:12,781 [DEBUG] org.hibernate.cfg.HbmBinder  - Named query: ServicioBean.getId -> 
+        from ServicioBean s where s.id = :id
+    
+2019-03-20 17:06:12,783 [DEBUG] org.hibernate.cfg.HbmBinder  - Named query: ServicioBean.getCliente -> 
+        from ServicioBean s where s.cliente = :idCliente
+    
+2019-03-20 17:06:12,784 [DEBUG] org.hibernate.cfg.HbmBinder  - Named query: ServicioBean.getByFechaIngresoOrderVendedor -> 
+        from ServicioBean s where s.fechaIngreso >= :fDesde and s.fechaIngreso <= :fHasta order by vendedor asc, fechaIngreso asc
+    
+2019-03-20 17:06:12,786 [DEBUG] org.hibernate.cfg.HbmBinder  - Named query: ServicioBean.getByFechaVentaOrderFecha -> 
+        from ServicioBean s where s.fechaVenta >= :fDesde and s.fechaVenta <= :fHasta order by fechaVenta asc
+    
+2019-03-20 17:06:12,788 [DEBUG] org.hibernate.cfg.HbmBinder  - Named query: ServicioBean.getDivididos -> 
+        from ServicioBean s where s.estado = :estado
+    
+2019-03-20 17:06:12,790 [DEBUG] org.hibernate.cfg.Configuration  - null<-org.dom4j.tree.DefaultAttribute@5b1669c0 [Attribute: name resource value "com/financiera/domain/hibernate/MovimientoBean.hbm.xml"]
+2019-03-20 17:06:12,791 [INFO ] org.hibernate.cfg.Configuration  - Reading mappings from resource: com/financiera/domain/hibernate/MovimientoBean.hbm.xml
+2019-03-20 17:06:12,889 [DEBUG] org.hibernate.util.DTDEntityResolver  - trying to resolve system-id [http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd]
+2019-03-20 17:06:12,890 [DEBUG] org.hibernate.util.DTDEntityResolver  - recognized hibernate namespace; attempting to resolve on classpath under org/hibernate/
+2019-03-20 17:06:12,900 [DEBUG] org.hibernate.util.DTDEntityResolver  - located [http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd] in classpath
+2019-03-20 17:06:14,034 [INFO ] org.hibernate.cfg.HbmBinder  - Mapping class: com.financiera.domain.bean.MovimientoBean -> MOVIMIENTO
+2019-03-20 17:06:14,039 [DEBUG] org.hibernate.cfg.HbmBinder  - Mapped property: id -> ID_MOVIMIENTO
+2019-03-20 17:06:14,046 [DEBUG] org.hibernate.cfg.HbmBinder  - Mapped property: idCliente -> ID_CLIENTE
+2019-03-20 17:06:14,056 [DEBUG] org.hibernate.cfg.HbmBinder  - Mapped property: cliente -> ID_CLIENTE
+2019-03-20 17:06:14,062 [DEBUG] org.hibernate.cfg.HbmBinder  - Mapped property: idServicio -> ID_SERVICIO
+2019-03-20 17:06:14,067 [DEBUG] org.hibernate.cfg.HbmBinder  - Mapped property: fecha -> FECHA
+2019-03-20 17:06:14,072 [DEBUG] org.hibernate.cfg.HbmBinder  - Mapped property: importe -> IMPORTE
+2019-03-20 17:06:14,078 [DEBUG] org.hibernate.cfg.HbmBinder  - Mapped property: descripcion -> DESCRIPCION
+2019-03-20 17:06:14,083 [DEBUG] org.hibernate.cfg.HbmBinder  - Mapped property: nroCuota -> NRO_CUOTA
+2019-03-20 17:06:14,089 [DEBUG] org.hibernate.cfg.HbmBinder  - Mapped property: totalCuotas -> TOTAL_CUOTA
+2019-03-20 17:06:14,099 [DEBUG] org.hibernate.cfg.HbmBinder  - Mapped property: estado -> ID_ESTADO
+2019-03-20 17:06:14,108 [DEBUG] org.hibernate.cfg.HbmBinder  - Mapped property: disparo -> ID_DISPARO
+2019-03-20 17:06:14,109 [DEBUG] org.hibernate.cfg.HbmBinder  - Named query: MovimientoBean.findByPendDisparo -> 
+        from MovimientoBean m where m.estado = :estado order by m.idCliente asc, m.fecha asc, m.importe asc
+    
+2019-03-20 17:06:14,111 [DEBUG] org.hibernate.cfg.HbmBinder  - Named query: MovimientoBean.findByPendDisparoFecha -> 
+        from MovimientoBean m where m.idCliente = :idCliente and m.estado = :estado and m.fecha = :fecha
+    
+2019-03-20 17:06:14,113 [DEBUG] org.hibernate.cfg.HbmBinder  - Named query: MovimientoBean.findByPendClienteEstado -> 
+        from MovimientoBean m where m.idCliente = :idCliente and m.estado = :estado
+    
+2019-03-20 17:06:14,115 [DEBUG] org.hibernate.cfg.HbmBinder  - Named query: MovimientoBean.findByPendDisparoEstado -> 
+        from MovimientoBean m where m.idCliente = :idCliente and m.idServicio = :idServicio and (m.estado = :estado1 or m.estado = :estado2 or m.estado = :estado3) and m.fecha <= :fecha
+    
+2019-03-20 17:06:14,117 [DEBUG] org.hibernate.cfg.HbmBinder  - Named query: MovimientoBean.findByMovClienteRespondido -> 
+        from MovimientoBean m where m.idCliente = :idCliente and m.estado > 2
+    
+2019-03-20 17:06:14,118 [DEBUG] org.hibernate.cfg.HbmBinder  - Named query: MovimientoBean.getAll -> 
+        from MovimientoBean m order by m.idCliente asc, m.fecha asc
+    
+2019-03-20 17:06:14,120 [DEBUG] org.hibernate.cfg.HbmBinder  - Named query: MovimientoBean.getAllbyCliente -> 
+        from MovimientoBean m where m.idCliente = :idCliente order by m.idServicio asc, m.fecha asc
+    
+2019-03-20 17:06:14,122 [DEBUG] org.hibernate.cfg.HbmBinder  - Named query: MovimientoBean.getAllbyServicio -> 
+        from MovimientoBean m where m.idServicio = :idServicio order by m.fecha asc
+    
+2019-03-20 17:06:14,124 [DEBUG] org.hibernate.cfg.HbmBinder  - Named query: MovimientoBean.findByClienteDisparado -> 
+        from MovimientoBean m where m.idCliente = :idCliente and m.estado = :estado order by m.idServicio asc, m.fecha asc
+    
+2019-03-20 17:06:14,125 [DEBUG] org.hibernate.cfg.HbmBinder  - Named query: MovimientoBean.findByMovConRespuesta -> 
+        from MovimientoBean m where m.estado > 2 and m.fecha > :fecha1 and m.fecha < :fecha2 order by m.idCliente asc, m.idServicio asc, m.fecha asc
+    
+2019-03-20 17:06:14,127 [DEBUG] org.hibernate.cfg.HbmBinder  - Named query: MovimientoBean.findByMovFechaMayor -> 
+        from MovimientoBean m where m.estado > 2 and m.fecha >= :fecha order by m.idCliente asc, m.idServicio asc, m.fecha asc
+    
+2019-03-20 17:06:14,129 [DEBUG] org.hibernate.cfg.HbmBinder  - Named query: MovimientoBean.findByServicio -> 
+        from MovimientoBean m where m.idServicio = :idServicio order by m.fecha asc
+    
+2019-03-20 17:06:14,131 [DEBUG] org.hibernate.cfg.HbmBinder  - Named query: MovimientoBean.findByFecha -> 
+        from MovimientoBean m where m.fecha >= :fDesde and m.fecha <= :fHasta order by m.fecha asc
+    
+2019-03-20 17:06:14,133 [DEBUG] org.hibernate.cfg.HbmBinder  - Named query: MovimientoBean.findOrderServicio -> 
+        from MovimientoBean m where  m.fecha >= :fDesde and (m.estado = :estado1 or m.estado = :estado2) order by m.idServicio asc, m.fecha asc
+    
+2019-03-20 17:06:14,135 [DEBUG] org.hibernate.cfg.HbmBinder  - Named query: MovimientoBean.findEstado38 -> 
+        from MovimientoBean m where  m.estado = 38
+    
+2019-03-20 17:06:14,136 [DEBUG] org.hibernate.cfg.HbmBinder  - Named query: MovimientoBean.findEstadoyRangoFecha -> 
+        from MovimientoBean m where  m.fecha >= :fDesde and m.fecha <= :fHasta and m.estado = :estado order by m.idCliente asc, m.fecha asc
+    
+2019-03-20 17:06:14,138 [DEBUG] org.hibernate.cfg.HbmBinder  - Named query: MovimientoBean.getMovimientoFindEstado -> 
+        from MovimientoBean m where m.estado = :estado1 or m.estado = :estado2
+    
+2019-03-20 17:06:14,140 [DEBUG] org.hibernate.cfg.Configuration  - null<-org.dom4j.tree.DefaultAttribute@15bb5034 [Attribute: name resource value "com/financiera/domain/hibernate/MovimientoHistBean.hbm.xml"]
+2019-03-20 17:06:14,141 [INFO ] org.hibernate.cfg.Configuration  - Reading mappings from resource: com/financiera/domain/hibernate/MovimientoHistBean.hbm.xml
+2019-03-20 17:06:14,243 [DEBUG] org.hibernate.util.DTDEntityResolver  - trying to resolve system-id [http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd]
+2019-03-20 17:06:14,244 [DEBUG] org.hibernate.util.DTDEntityResolver  - recognized hibernate namespace; attempting to resolve on classpath under org/hibernate/
+2019-03-20 17:06:14,254 [DEBUG] org.hibernate.util.DTDEntityResolver  - located [http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd] in classpath
+2019-03-20 17:06:15,195 [INFO ] org.hibernate.cfg.HbmBinder  - Mapping class: com.financiera.domain.bean.MovimientoHistBean -> MOVIMIENTO_HIST
+2019-03-20 17:06:15,200 [DEBUG] org.hibernate.cfg.HbmBinder  - Mapped property: id -> ID_MOVIMIENTO_HIST
+2019-03-20 17:06:15,208 [DEBUG] org.hibernate.cfg.HbmBinder  - Mapped property: idCliente -> ID_CLIENTE
+2019-03-20 17:06:15,217 [DEBUG] org.hibernate.cfg.HbmBinder  - Mapped property: cliente -> ID_CLIENTE
+2019-03-20 17:06:15,223 [DEBUG] org.hibernate.cfg.HbmBinder  - Mapped property: idServicio -> ID_SERVICIO
+2019-03-20 17:06:15,228 [DEBUG] org.hibernate.cfg.HbmBinder  - Mapped property: fecha -> FECHA
+2019-03-20 17:06:15,234 [DEBUG] org.hibernate.cfg.HbmBinder  - Mapped property: importe -> IMPORTE
+2019-03-20 17:06:15,239 [DEBUG] org.hibernate.cfg.HbmBinder  - Mapped property: descripcion -> DESCRIPCION
+2019-03-20 17:06:15,245 [DEBUG] org.hibernate.cfg.HbmBinder  - Mapped property: nroCuota -> NRO_CUOTA
+2019-03-20 17:06:15,250 [DEBUG] org.hibernate.cfg.HbmBinder  - Mapped property: totalCuotas -> TOTAL_CUOTA
+2019-03-20 17:06:15,260 [DEBUG] org.hibernate.cfg.HbmBinder  - Mapped property: estado -> ID_ESTADO
+2019-03-20 17:06:15,270 [DEBUG] org.hibernate.cfg.HbmBinder  - Mapped property: disparo -> ID_DISPARO
+2019-03-20 17:06:15,271 [DEBUG] org.hibernate.cfg.HbmBinder  - Named query: MovimientoHistBean.getAll -> 
+        from MovimientoHistBean m order by m.idCliente asc, m.fecha asc
+    
+2019-03-20 17:06:15,273 [DEBUG] org.hibernate.cfg.HbmBinder  - Named query: MovimientoHistBean.getAllbyCliente -> 
+        from MovimientoHistBean m where m.idCliente = :idCliente order by m.idServicio asc, m.fecha asc
+    
+2019-03-20 17:06:15,274 [DEBUG] org.hibernate.cfg.HbmBinder  - Named query: MovimientoHistBean.findByServicio -> 
+        from MovimientoHistBean m where m.idServicio = :idServicio order by m.fecha asc
+    
+2019-03-20 17:06:15,276 [DEBUG] org.hibernate.cfg.Configuration  - null<-org.dom4j.tree.DefaultAttribute@470734c3 [Attribute: name resource value "com/financiera/domain/hibernate/EstadoMovBean.hbm.xml"]
+2019-03-20 17:06:15,277 [INFO ] org.hibernate.cfg.Configuration  - Reading mappings from resource: com/financiera/domain/hibernate/EstadoMovBean.hbm.xml
+2019-03-20 17:06:15,374 [DEBUG] org.hibernate.util.DTDEntityResolver  - trying to resolve system-id [http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd]
+2019-03-20 17:06:15,375 [DEBUG] org.hibernate.util.DTDEntityResolver  - recognized hibernate namespace; attempting to resolve on classpath under org/hibernate/
+2019-03-20 17:06:15,385 [DEBUG] org.hibernate.util.DTDEntityResolver  - located [http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd] in classpath
+2019-03-20 17:06:16,294 [INFO ] org.hibernate.cfg.HbmBinder  - Mapping class: com.financiera.domain.bean.EstadoMovBean -> Estado_Mov
+2019-03-20 17:06:16,299 [DEBUG] org.hibernate.cfg.HbmBinder  - Mapped property: id -> ID_ESTADO
+2019-03-20 17:06:16,306 [DEBUG] org.hibernate.cfg.HbmBinder  - Mapped property: estado -> ESTADO
+2019-03-20 17:06:16,311 [DEBUG] org.hibernate.cfg.HbmBinder  - Mapped property: color -> COLOR
+2019-03-20 17:06:16,317 [DEBUG] org.hibernate.cfg.HbmBinder  - Mapped property: codRechazo -> COD_RECHAZO
+2019-03-20 17:06:16,318 [DEBUG] org.hibernate.cfg.HbmBinder  - Named query: EstadoMovBean.findById -> 
+        from EstadoMovBean e where e.id = :id
+    
+2019-03-20 17:06:16,320 [DEBUG] org.hibernate.cfg.HbmBinder  - Named query: EstadoMovBean.findByEstado -> 
+        from EstadoMovBean e where e.estado = :estado
+    
+2019-03-20 17:06:16,321 [DEBUG] org.hibernate.cfg.HbmBinder  - Named query: EstadoMovBean.findByColor -> 
+        from EstadoMovBean e where e.color = :color
+    
+2019-03-20 17:06:16,323 [DEBUG] org.hibernate.cfg.HbmBinder  - Named query: EstadoMovBean.findByCodRechazo -> 
+        from EstadoMovBean e where e.codRechazo = :codRechazo
+    
+2019-03-20 17:06:16,325 [DEBUG] org.hibernate.cfg.HbmBinder  - Named query: EstadoMovBean.getAllRechazos -> 
+        from EstadoMovBean e where e.color = 4 order by e.codRechazo
+    
+2019-03-20 17:06:16,326 [DEBUG] org.hibernate.cfg.HbmBinder  - Named query: EstadoMovBean.getAll -> 
+        from EstadoMovBean e order by e.id
+    
+2019-03-20 17:06:16,328 [DEBUG] org.hibernate.cfg.Configuration  - null<-org.dom4j.tree.DefaultAttribute@173ed316 [Attribute: name resource value "com/financiera/domain/hibernate/DisparoBean.hbm.xml"]
+2019-03-20 17:06:16,329 [INFO ] org.hibernate.cfg.Configuration  - Reading mappings from resource: com/financiera/domain/hibernate/DisparoBean.hbm.xml
+2019-03-20 17:06:16,420 [DEBUG] org.hibernate.util.DTDEntityResolver  - trying to resolve system-id [http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd]
+2019-03-20 17:06:16,421 [DEBUG] org.hibernate.util.DTDEntityResolver  - recognized hibernate namespace; attempting to resolve on classpath under org/hibernate/
+2019-03-20 17:06:16,430 [DEBUG] org.hibernate.util.DTDEntityResolver  - located [http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd] in classpath
+2019-03-20 17:06:17,323 [INFO ] org.hibernate.cfg.HbmBinder  - Mapping class: com.financiera.domain.bean.DisparoBean -> DISPARO
+2019-03-20 17:06:17,329 [DEBUG] org.hibernate.cfg.HbmBinder  - Mapped property: id -> ID_DISPARO
+2019-03-20 17:06:17,335 [DEBUG] org.hibernate.cfg.HbmBinder  - Mapped property: fecha -> FECHA
+2019-03-20 17:06:17,341 [DEBUG] org.hibernate.cfg.HbmBinder  - Mapped property: cantRegistros -> CANT_REGISTRO
+2019-03-20 17:06:17,346 [DEBUG] org.hibernate.cfg.HbmBinder  - Mapped property: importe -> IMPORTE
+2019-03-20 17:06:17,347 [DEBUG] org.hibernate.cfg.HbmBinder  - Named query: DisparoBean.getAll -> 
+        from DisparoBean d order by d.id
+    
+2019-03-20 17:06:17,349 [DEBUG] org.hibernate.cfg.Configuration  - null<-org.dom4j.tree.DefaultAttribute@76b1e9b8 [Attribute: name resource value "com/financiera/domain/hibernate/PermisoBean.hbm.xml"]
+2019-03-20 17:06:17,350 [INFO ] org.hibernate.cfg.Configuration  - Reading mappings from resource: com/financiera/domain/hibernate/PermisoBean.hbm.xml
+2019-03-20 17:06:17,452 [DEBUG] org.hibernate.util.DTDEntityResolver  - trying to resolve system-id [http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd]
+2019-03-20 17:06:17,453 [DEBUG] org.hibernate.util.DTDEntityResolver  - recognized hibernate namespace; attempting to resolve on classpath under org/hibernate/
+2019-03-20 17:06:17,462 [DEBUG] org.hibernate.util.DTDEntityResolver  - located [http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd] in classpath
+2019-03-20 17:06:18,542 [INFO ] org.hibernate.cfg.HbmBinder  - Mapping class: com.financiera.domain.bean.PermisoBean -> Permiso
+2019-03-20 17:06:18,547 [DEBUG] org.hibernate.cfg.HbmBinder  - Mapped property: id -> ID_PERMISO
+2019-03-20 17:06:18,554 [DEBUG] org.hibernate.cfg.HbmBinder  - Mapped property: codigo -> CODIGO
+2019-03-20 17:06:18,555 [DEBUG] org.hibernate.cfg.HbmBinder  - Named query: PermisoBean.getAll -> 
+        from PermisoBean p order by p.id
+    
+2019-03-20 17:06:18,557 [DEBUG] org.hibernate.cfg.HbmBinder  - Named query: PermisoBean.findById -> 
+        from PermisoBean p where p.id = :id
+    
+2019-03-20 17:06:18,559 [DEBUG] org.hibernate.cfg.Configuration  - null<-org.dom4j.tree.DefaultAttribute@793f29ff [Attribute: name resource value "com/financiera/domain/hibernate/GrupoPermisoBean.hbm.xml"]
+2019-03-20 17:06:18,559 [INFO ] org.hibernate.cfg.Configuration  - Reading mappings from resource: com/financiera/domain/hibernate/GrupoPermisoBean.hbm.xml
+2019-03-20 17:06:18,652 [DEBUG] org.hibernate.util.DTDEntityResolver  - trying to resolve system-id [http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd]
+2019-03-20 17:06:18,653 [DEBUG] org.hibernate.util.DTDEntityResolver  - recognized hibernate namespace; attempting to resolve on classpath under org/hibernate/
+2019-03-20 17:06:18,662 [DEBUG] org.hibernate.util.DTDEntityResolver  - located [http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd] in classpath
+2019-03-20 17:06:19,557 [INFO ] org.hibernate.cfg.HbmBinder  - Mapping class: com.financiera.domain.bean.GrupoPermisoBean -> GRUPO_PERMISO
+2019-03-20 17:06:19,562 [DEBUG] org.hibernate.cfg.HbmBinder  - Mapped property: id -> ID_GRUPO
+2019-03-20 17:06:19,570 [DEBUG] org.hibernate.cfg.HbmBinder  - Mapped property: permisos
+2019-03-20 17:06:19,571 [DEBUG] org.hibernate.cfg.HbmBinder  - Named query: GrupoPermisoBean.getAll -> 
+        from GrupoPermisoBean g order by g.id
+    
+2019-03-20 17:06:19,573 [DEBUG] org.hibernate.cfg.HbmBinder  - Named query: GrupoPermisoBean.findById -> 
+        from GrupoPermisoBean b where b.id = :id
+    
+2019-03-20 17:06:19,575 [DEBUG] org.hibernate.cfg.Configuration  - null<-org.dom4j.tree.DefaultAttribute@54422e18 [Attribute: name resource value "com/financiera/domain/hibernate/UsuarioBean.hbm.xml"]
+2019-03-20 17:06:19,576 [INFO ] org.hibernate.cfg.Configuration  - Reading mappings from resource: com/financiera/domain/hibernate/UsuarioBean.hbm.xml
+2019-03-20 17:06:19,663 [DEBUG] org.hibernate.util.DTDEntityResolver  - trying to resolve system-id [http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd]
+2019-03-20 17:06:19,664 [DEBUG] org.hibernate.util.DTDEntityResolver  - recognized hibernate namespace; attempting to resolve on classpath under org/hibernate/
+2019-03-20 17:06:19,673 [DEBUG] org.hibernate.util.DTDEntityResolver  - located [http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd] in classpath
+2019-03-20 17:06:20,750 [INFO ] org.hibernate.cfg.HbmBinder  - Mapping class: com.financiera.domain.bean.UsuarioBean -> USUARIO
+2019-03-20 17:06:20,756 [DEBUG] org.hibernate.cfg.HbmBinder  - Mapped property: id -> ID_USUARIO
+2019-03-20 17:06:20,763 [DEBUG] org.hibernate.cfg.HbmBinder  - Mapped property: nombre -> NOMBRE
+2019-03-20 17:06:20,768 [DEBUG] org.hibernate.cfg.HbmBinder  - Mapped property: apellido -> APELLIDO
+2019-03-20 17:06:20,774 [DEBUG] org.hibernate.cfg.HbmBinder  - Mapped property: fechaDesde -> FECHA_DESDE
+2019-03-20 17:06:20,780 [DEBUG] org.hibernate.cfg.HbmBinder  - Mapped property: fechaHasta -> FECHA_HASTA
+2019-03-20 17:06:20,785 [DEBUG] org.hibernate.cfg.HbmBinder  - Mapped property: alias -> ALIAS
+2019-03-20 17:06:20,791 [DEBUG] org.hibernate.cfg.HbmBinder  - Mapped property: password -> PASSWORD
+2019-03-20 17:06:20,796 [DEBUG] org.hibernate.cfg.HbmBinder  - Mapped property: empresa -> EMPRESA
+2019-03-20 17:06:20,803 [DEBUG] org.hibernate.cfg.HbmBinder  - Mapped property: grupos
+2019-03-20 17:06:20,804 [DEBUG] org.hibernate.cfg.HbmBinder  - Named query: UsuarioBean.getAll -> 
+        from UsuarioBean u order by u.id
+    
+2019-03-20 17:06:20,806 [DEBUG] org.hibernate.cfg.HbmBinder  - Named query: UsuarioBean.findById -> 
+        from UsuarioBean b where b.id = :id
+    
+2019-03-20 17:06:20,807 [DEBUG] org.hibernate.cfg.HbmBinder  - Named query: UsuarioBean.findByAlias -> 
+        from UsuarioBean b where b.alias = :alias
+    
+2019-03-20 17:06:20,809 [DEBUG] org.hibernate.cfg.Configuration  - null<-org.dom4j.tree.DefaultAttribute@3b0fe47a [Attribute: name resource value "com/financiera/domain/hibernate/DisparoEntidadesBean.hbm.xml"]
+2019-03-20 17:06:20,810 [INFO ] org.hibernate.cfg.Configuration  - Reading mappings from resource: com/financiera/domain/hibernate/DisparoEntidadesBean.hbm.xml
+2019-03-20 17:06:20,911 [DEBUG] org.hibernate.util.DTDEntityResolver  - trying to resolve system-id [http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd]
+2019-03-20 17:06:20,912 [DEBUG] org.hibernate.util.DTDEntityResolver  - recognized hibernate namespace; attempting to resolve on classpath under org/hibernate/
+2019-03-20 17:06:20,921 [DEBUG] org.hibernate.util.DTDEntityResolver  - located [http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd] in classpath
+2019-03-20 17:06:21,916 [INFO ] org.hibernate.cfg.HbmBinder  - Mapping class: com.financiera.domain.bean.DisparoEntidadesBean -> DISPARO_ENTIDADES
+2019-03-20 17:06:21,922 [DEBUG] org.hibernate.cfg.HbmBinder  - Mapped property: id -> ID_DISPARO_ENTIDADES
+2019-03-20 17:06:21,929 [DEBUG] org.hibernate.cfg.HbmBinder  - Mapped property: identificador -> IDENTIFICADOR
+2019-03-20 17:06:21,935 [DEBUG] org.hibernate.cfg.HbmBinder  - Mapped property: tipo -> TIPO
+2019-03-20 17:06:21,946 [DEBUG] org.hibernate.cfg.HbmBinder  - Mapped property: disparo -> ID_DISPARO
+2019-03-20 17:06:21,947 [DEBUG] org.hibernate.cfg.HbmBinder  - Named query: DisparoEntidadesBean.getBackup -> 
+        from DisparoEntidadesBean d
+    
+2019-03-20 17:06:21,949 [DEBUG] org.hibernate.cfg.HbmBinder  - Named query: DisparoEntidadesBean.getAll -> 
+        from DisparoEntidadesBean d where d.disparo = null order by d.tipo, d.id
+    
+2019-03-20 17:06:21,951 [DEBUG] org.hibernate.cfg.HbmBinder  - Named query: DisparoEntidadesBean.findByTipo -> 
+        from DisparoEntidadesBean de where de.disparo = null and de.tipo = :tipo
+    
+2019-03-20 17:06:21,953 [DEBUG] org.hibernate.cfg.HbmBinder  - Named query: DisparoEntidadesBean.findByIdTipo -> 
+        from DisparoEntidadesBean deb where deb.disparo = null and deb.identificador = :identificador and deb.tipo = :tipo
+    
+2019-03-20 17:06:21,955 [DEBUG] org.hibernate.cfg.HbmBinder  - Named query: DisparoEntidadesBean.findPendientes -> 
+        from DisparoEntidadesBean deb where deb.disparo = null
+    
+2019-03-20 17:06:21,956 [DEBUG] org.hibernate.cfg.Configuration  - null<-org.dom4j.tree.DefaultAttribute@58cbafc2 [Attribute: name resource value "com/financiera/domain/hibernate/TemporalBaproBean.hbm.xml"]
+2019-03-20 17:06:21,957 [INFO ] org.hibernate.cfg.Configuration  - Reading mappings from resource: com/financiera/domain/hibernate/TemporalBaproBean.hbm.xml
+2019-03-20 17:06:22,094 [DEBUG] org.hibernate.util.DTDEntityResolver  - trying to resolve system-id [http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd]
+2019-03-20 17:06:22,096 [DEBUG] org.hibernate.util.DTDEntityResolver  - recognized hibernate namespace; attempting to resolve on classpath under org/hibernate/
+2019-03-20 17:06:22,109 [DEBUG] org.hibernate.util.DTDEntityResolver  - located [http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd] in classpath
+2019-03-20 17:06:23,095 [INFO ] org.hibernate.cfg.HbmBinder  - Mapping class: com.financiera.domain.bean.TemporalBaproBean -> TEMPORAL_BAPRO
+2019-03-20 17:06:23,100 [DEBUG] org.hibernate.cfg.HbmBinder  - Mapped property: id -> ID_TEMPORAL_BAPRO
+2019-03-20 17:06:23,108 [DEBUG] org.hibernate.cfg.HbmBinder  - Mapped property: codigoInternoBanco -> COD_INTERNO_BCO
+2019-03-20 17:06:23,114 [DEBUG] org.hibernate.cfg.HbmBinder  - Mapped property: fechaVencimiento -> FECHA_VENCIMIENTO
+2019-03-20 17:06:23,119 [DEBUG] org.hibernate.cfg.HbmBinder  - Mapped property: codigoEmpresa -> COD_EMPRESA
+2019-03-20 17:06:23,125 [DEBUG] org.hibernate.cfg.HbmBinder  - Mapped property: idCliente -> ID_CLIENTE
+2019-03-20 17:06:23,130 [DEBUG] org.hibernate.cfg.HbmBinder  - Mapped property: tipoMoneda -> TIPO_MONEDA
+2019-03-20 17:06:23,136 [DEBUG] org.hibernate.cfg.HbmBinder  - Mapped property: cbu -> CBU
+2019-03-20 17:06:23,142 [DEBUG] org.hibernate.cfg.HbmBinder  - Mapped property: importe -> IMPORTE
+2019-03-20 17:06:23,148 [DEBUG] org.hibernate.cfg.HbmBinder  - Mapped property: cuitEmpresa -> CUIT_EMPRESA
+2019-03-20 17:06:23,154 [DEBUG] org.hibernate.cfg.HbmBinder  - Mapped property: descripPrestacion -> DESCRIP_PRESENTACION
+2019-03-20 17:06:23,160 [DEBUG] org.hibernate.cfg.HbmBinder  - Mapped property: referenciaUnivDebito -> REF_UNIV_DEBITO
+2019-03-20 17:06:23,166 [DEBUG] org.hibernate.cfg.HbmBinder  - Mapped property: reservado -> RESERVADO
+2019-03-20 17:06:23,172 [DEBUG] org.hibernate.cfg.HbmBinder  - Mapped property: nuevoIdCliente -> NUEVO_ID_CLIENTE
+2019-03-20 17:06:23,177 [DEBUG] org.hibernate.cfg.HbmBinder  - Mapped property: codRechazo -> COD_RECHAZO
+2019-03-20 17:06:23,183 [DEBUG] org.hibernate.cfg.HbmBinder  - Mapped property: nombreEmpresa -> NOMBRE_EMPRESA
+2019-03-20 17:06:23,184 [DEBUG] org.hibernate.cfg.HbmBinder  - Named query: TemporalBaproBean.getAllOrderCliente -> 
+        from TemporalBaproBean t order by t.idCliente asc, t.fechaVencimiento asc
+    
+2019-03-20 17:06:23,186 [DEBUG] org.hibernate.cfg.Configuration  - null<-org.dom4j.tree.DefaultAttribute@7161d8d1 [Attribute: name resource value "com/financiera/domain/hibernate/TemporalSVilleBean.hbm.xml"]
+2019-03-20 17:06:23,187 [INFO ] org.hibernate.cfg.Configuration  - Reading mappings from resource: com/financiera/domain/hibernate/TemporalSVilleBean.hbm.xml
+2019-03-20 17:06:23,289 [DEBUG] org.hibernate.util.DTDEntityResolver  - trying to resolve system-id [http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd]
+2019-03-20 17:06:23,290 [DEBUG] org.hibernate.util.DTDEntityResolver  - recognized hibernate namespace; attempting to resolve on classpath under org/hibernate/
+2019-03-20 17:06:23,299 [DEBUG] org.hibernate.util.DTDEntityResolver  - located [http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd] in classpath

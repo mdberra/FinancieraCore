@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping SYSTEM "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+
+<hibernate-mapping package="com.financiera.domain.bean">
+	<class name="TemporalNacionBean" table="TEMPORAL_NACION" lazy="true">
+		<id name="id" column="ID_TEMPORAL_NACION" type="java.lang.Long">
+			<generator class="native"/>
+		</id>
+		<property name="sucursalCA"			type="java.lang.String"  column="SUC_CA"/>
+		<property name="nroCA"				type="java.lang.String"  column="NRO_CA"/>
+		<property name="importe"			type="java.lang.String"  column="IMP_ENTERO"/>
+	</class>
+   	<query name="TemporalNacionBean.getAll">
+        <![CDATA[from TemporalNacionBean t order by t.sucursalCA asc, t.nroCA asc]]>
+    </query>
+    <query name="TemporalNacionBean.getAllOrderCliente">
+        <![CDATA[from TemporalNacionBean t order by t.sucursalCA asc, t.nroCA asc]]>
+    </query>
+</hibernate-mapping>

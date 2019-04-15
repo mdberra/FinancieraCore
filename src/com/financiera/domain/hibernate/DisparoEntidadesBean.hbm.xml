@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping SYSTEM "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+
+<hibernate-mapping package="com.financiera.domain.bean">
+	<class name="DisparoEntidadesBean" table="DISPARO_ENTIDADES" lazy="true">
+		<id name="id" column="ID_DISPARO_ENTIDADES" type="java.lang.Long">
+			<generator class="native"/>
+		</id>
+		<property name="identificador" type="java.lang.Long" column="IDENTIFICADOR"/>
+		<property name="tipo"		   type="java.lang.String" column="TIPO"/>
+		<many-to-one name="disparo" column="ID_DISPARO" class="DisparoBean" update="true" insert="true"/>
+
+	</class>
+	<query name="DisparoEntidadesBean.getBackup">
+        <![CDATA[from DisparoEntidadesBean d]]>
+    </query>
+	<query name="DisparoEntidadesBean.getAll">
+        <![CDATA[from DisparoEntidadesBean d where d.disparo = null order by d.tipo, d.id]]>
+    </query>
+    <query name="DisparoEntidadesBean.findByTipo">
+        <![CDATA[from DisparoEntidadesBean de where de.disparo = null and de.tipo = :tipo]]>
+    </query>
+    <query name="DisparoEntidadesBean.findByIdTipo">
+        <![CDATA[from DisparoEntidadesBean deb where deb.disparo = null and deb.identificador = :identificador and deb.tipo = :tipo]]>
+    </query>
+    <query name="DisparoEntidadesBean.findPendientes">
+        <![CDATA[from DisparoEntidadesBean deb where deb.disparo = null]]>
+    </query>
+</hibernate-mapping>
