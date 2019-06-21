@@ -3,55 +3,24 @@ package com.financiera.domain.servicio.impl;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.PrintWriter;
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.Collections;
-import java.util.Date;
-import java.util.Enumeration;
-import java.util.Hashtable;
-import java.util.Iterator;
-import java.util.List;
-import java.util.Vector;
-
-import jxl.Workbook;
-import jxl.format.Alignment;
-import jxl.format.Colour;
-import jxl.format.UnderlineStyle;
-import jxl.write.Label;
-import jxl.write.Number;
-import jxl.write.WritableCellFormat;
-import jxl.write.WritableFont;
-import jxl.write.WritableSheet;
-import jxl.write.WritableWorkbook;
 
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 
 import com.dto.ClienteDTO;
 import com.dto.CtacteDTO;
-import com.dto.Parser;
-import com.dto.ServicioDTO;
-import com.dto.TotalNoCobradosDTO;
-import com.dto.TotalesDesgloseDTO;
-import com.financiera.core.server.AbstractService;
 import com.financiera.core.server.CacheManager;
-import com.financiera.core.server.ServiceLocator;
-import com.financiera.core.util.DateTimeUtil;
-import com.financiera.domain.bean.BancoBean;
-import com.financiera.domain.bean.ClienteBean;
-import com.financiera.domain.bean.DelegacionBean;
-import com.financiera.domain.bean.DiasCobroBean;
-import com.financiera.domain.bean.EstadoMovBean;
-import com.financiera.domain.bean.MovimientoBean;
-import com.financiera.domain.bean.VendedorBean;
-import com.financiera.domain.service.BancoService;
-import com.financiera.domain.service.ClienteService;
-import com.financiera.domain.service.DelegacionService;
-import com.financiera.domain.service.MovimientoService;
-import com.financiera.domain.service.ServicioService;
-import com.financiera.domain.service.VendedorService;
 import com.financiera.domain.servicio.ExportacionExcelServicio;
 
+import jxl.Workbook;
+import jxl.write.Label;
+import jxl.write.Number;
+import jxl.write.WritableSheet;
+import jxl.write.WritableWorkbook;
+
+public class ExportacionExcelServicioImpl {// implements ExportacionExcelServicio {
+}
+/**
 public class ExportacionExcelServicioImpl extends AbstractService implements ExportacionExcelServicio {
 	private ClienteService    cliente    = (ClienteService)ServiceLocator.getInstance().getService(ClienteService.class);
 	private MovimientoService movimiento = (MovimientoService)ServiceLocator.getInstance().getService(MovimientoService.class);
@@ -315,7 +284,7 @@ public class ExportacionExcelServicioImpl extends AbstractService implements Exp
 					if(periodoColumna.get(tdDTO.getPeriodo()) == null) {
 						System.out.println("");
 					} else {
-						columna = periodoColumna.get(tdDTO.getPeriodo());
+//						columna = periodoColumna.get(tdDTO.getPeriodo());
 						
 						sheet.addCell(new Number(columna++, fila, tdDTO.getPendienteCant(),		numberCellFormat));
 						sheet.addCell(new Number(columna++, fila, tdDTO.getPendienteImporte(),	numberCellFormat));
@@ -642,9 +611,10 @@ public class ExportacionExcelServicioImpl extends AbstractService implements Exp
 			System.out.println("Error: " + e.getMessage());
 		}
 	}
+/**
 	public String noCobradosToExcel(String usuario) {
 		Session sesion = CacheManager.getInstance().getUsuarioSesion(usuario);
-		TotalNoCobradosDTO tncDTO = new TotalNoCobradosDTO();
+		TotalNoCobradosDTOdddd tncDTO = new TotalNoCobradosDTOdddd();
 		
 		CtacteDTO mov = null;
 		String periodo = null;
@@ -795,7 +765,7 @@ public class ExportacionExcelServicioImpl extends AbstractService implements Exp
 			System.out.println("Error: " + e.getMessage());
 		}
 		return tncDTO.toString();
-	}
+	} 
 	
 	public void extraerInfoGraf(String usuario) {
 		Session sesion = CacheManager.getInstance().getUsuarioSesion(usuario);
@@ -1046,4 +1016,4 @@ public class ExportacionExcelServicioImpl extends AbstractService implements Exp
 			System.out.println("Error: " + e.getMessage());
 		}
 	}
-}
+}*/

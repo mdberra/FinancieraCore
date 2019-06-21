@@ -168,7 +168,10 @@ public class GenerarDisparoServicioImpl extends AbstractService implements Gener
 			String diaMesHoy = DateTimeUtil.formatDateDDMM(DateTimeUtil.getDate());
 			String baproFileName = "C:\\Servina\\Disparos\\EBT_SERVINA_" + diaHoy + ".TXT";
 			String superVilleFileName = "C:\\Servina\\Disparos\\DSERV" + diaMesHoy + ".001";
+			
 			String itauFileName = "C:\\Servina\\Disparos\\ITAU_" + diaHoy + ".TXT";
+//			String itauFileName = "//home//marce//Liberdina//Servina//Disparos//ITAU_" + diaHoy + ".TXT";
+
 			String bicaFileName = "C:\\Servina\\Disparos\\BICA_" + diaHoy + ".TXT";
 			PrintWriter printerBapro = archivo.abrirFileSalida(baproFileName);
 			PrintWriter printerSVille = archivo.abrirFileSalida(superVilleFileName);

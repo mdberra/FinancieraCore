@@ -39,7 +39,7 @@ public class ServiceNegocioLocator {
 		ServiceNegocioLocator serviceLocator = new ServiceNegocioLocator();
 		serviceLocator.addServervice(CtacteServicio.class,			 new CtacteServicioImpl());
 		serviceLocator.addServervice(DisparoServicio.class,		 	 new DisparoServicioImpl());
-		serviceLocator.addServervice(ExportacionExcelServicio.class, new ExportacionExcelServicioImpl());
+//		serviceLocator.addServervice(ExportacionExcelServicio.class, new ExportacionExcelServicioImpl());
 		serviceLocator.addServervice(GenerarDisparoServicio.class,	 new GenerarDisparoServicioImpl());
 		serviceLocator.addServervice(DelegacionesServicio.class,	 new DelegacionesServicioImpl());
 		serviceLocator.addServervice(VendedoresServicio.class,	 	 new VendedoresServicioImpl());

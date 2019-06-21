@@ -579,17 +579,18 @@ public class DisparoServicioImpl extends AbstractService implements DisparoServi
 		printerNacion.println(t.toStringTotal());
 	}
 //*********************************************************************************************
-	private void generarHeadItau() {
+	private void generarHeadItau(MovimientoBean m) {
 		TemporalItauBean t = new TemporalItauBean();
 		t.setCuitEmpresa(parametro.getCuitEmpresa());
 		t.setNroEnvio(nroEnvio);
 		t.setFechaGeneracionArchivo(fechaGeneracionArchivo);
+		t.setSecuencial(m.getDisparo().getId());
 		printerItau.println(t.toStringHeader());
 	}
 	private void generarDetItau(MovimientoBean m) {
 		if(itauPriVez) {
 			itauPriVez = false;
-			this.generarHeadItau();	
+			this.generarHeadItau(m);
 		}
 		try {
 			itauCantRegistros++;

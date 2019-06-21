@@ -8,6 +8,8 @@ import com.financiera.core.util.Util;
 
 public class TemporalItauBean {
 
+	public static Long secuencial = 0L;
+
 	public static final String ACEPTADO = "AC";
 	public static final String RECHAZADO = "RC";
 	
@@ -29,6 +31,9 @@ public class TemporalItauBean {
 	private String tipoReg;
 	private String tipoFile;
 	
+	public void setSecuencial(Long sec) {
+		this.secuencial = sec * 10000;
+	}
 	public boolean isAceptado() {
 		if(this.estado.compareTo(ACEPTADO)==0)
 			return true;
@@ -57,7 +62,7 @@ public class TemporalItauBean {
 		StringBuffer sb = new StringBuffer();
 		sb.append("DAFC");
 		sb.append(Util.formateo(Util.TEXTO, 7, new String(" "), false));
-		sb.append(Util.formateo(Util.NUMERICO, 8, m.getDisparo().getId(), false));
+		sb.append(Util.formateo(Util.NUMERICO, 8, secuencial++, false));
 		sb.append(Util.formateo(Util.TEXTO, 7, new String(" "), false));
 		sb.append("000");
 		sb.append(Util.formateo(Util.TEXTO, 14, new String(" "), false)); 

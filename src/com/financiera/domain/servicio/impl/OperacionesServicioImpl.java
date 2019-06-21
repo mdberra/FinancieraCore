@@ -62,8 +62,8 @@ public class OperacionesServicioImpl extends AbstractService implements Operacio
 		this.clearInforme();
 		
 		String fechaHoy = DateTimeUtil.formatDateTime1(DateTimeUtil.getDate());
-//		String outputFileName = new String("C:\\Servina\\Backups\\bajada_" + fechaHoy + ".txt");
-		String outputFileName = new String("//home//marce//Liberdina//Servina//Backups//bajada_" + fechaHoy + ".txt");
+		String outputFileName = new String("C:\\Servina\\Backups\\bajada_" + fechaHoy + ".txt");
+//		String outputFileName = new String("//home//marce//Desktop//Liberdina//Servina//Backups//bajada_" + fechaHoy + ".txt");
 
 		ServiceLocator.getInstance().removeService(persistencia);
 		ServiceLocator.getInstance().addServervice(PersistenceService.class, new PersistenceService());
@@ -497,7 +497,7 @@ public class OperacionesServicioImpl extends AbstractService implements Operacio
 			e.setColor(1);
 			e.setAccion(Persistible.INSERT);
 			objectosPersistir.add(e);
-			
+
 		} catch (Exception ex) { throw new Exception("EstadoMov con error: " + e.getId() + " :" + ex.getMessage()); }
 	}
 	private void disparo(String linea) throws Exception {

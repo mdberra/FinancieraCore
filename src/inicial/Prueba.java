@@ -1,5 +1,14 @@
 package inicial;
-
+//
+//  Restore
+// private void restore() {
+//
+// OperacionesServicioImpl
+// public String[] Backup(String usuario) {
+//
+// GenerarDisparoServicioImpl 
+// private String[] dispararBaproSVille
+//
 import java.io.Console;
 import java.io.File;
 import java.util.Collection;
@@ -68,7 +77,7 @@ public class Prueba {
 	private String usuarioString = new String("Administrador");
 	Session sesion;
 	private boolean validarMovExistente = true;
-	private String pathLinux = new String("//home//marce//Liberdina//Servina//");
+	private String pathLinux = new String("//home//marce//Desktop//Liberdina//Servina//");
 	private String pathWindows = new String("c:\\Servina\\");
 	
 	public static void main(String[] args) {
@@ -234,8 +243,8 @@ public class Prueba {
 		} catch (Exception e) {}
 	}
 	private void restore() {
-//		String[] informeOut = operaciones.Restore("c:\\Servina\\Backups\\subida.txt", usuarioString);
-		String[] informeOut = operaciones.Restore("//home//marce//Liberdina//Servina//Backups//subida.txt", usuarioString);
+		String[] informeOut = operaciones.Restore("c:\\Servina\\Backups\\subida.txt", usuarioString);
+//		String[] informeOut = operaciones.Restore("//home//marce//Liberdina//Servina//Backups//subida", usuarioString);
 		for(int i=0; i<informeOut.length; i++) {
 			if(!Util.isBlank(informeOut[i]))
 				System.out.println(informeOut[i]);

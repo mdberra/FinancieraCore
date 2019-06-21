@@ -8,4 +8,3 @@ Class-Path: . FinancieraCore_lib/antlr-2.7.7.jar FinancieraCore_lib/as
  e_lib/servlet-api.jar FinancieraCore_lib/standard.jar FinancieraCore_
  lib/hibernate3.jar FinancieraCore_lib/commons-collections-3.2.2.jar
 Main-Class: inicial.Prueba
-
