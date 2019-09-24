@@ -3,6 +3,7 @@ package com.dto;
 import java.util.Date;
 
 public class RespuestaDTO {
+	private int		idServicio;
 	private int		dni;
 	private String	cbu;
 	private String  sucursalCA;
@@ -30,6 +31,12 @@ public class RespuestaDTO {
 	}
 	public void setCodRechazo(String codRechazo) {
 		this.codRechazo = codRechazo;
+	}	
+	public int getIdServicio() {
+		return idServicio;
+	}
+	public void setIdServicio(int idServicio) {
+		this.idServicio = idServicio;
 	}
 	public int getDni() {
 		return dni;

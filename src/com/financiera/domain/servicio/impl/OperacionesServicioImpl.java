@@ -62,6 +62,7 @@ public class OperacionesServicioImpl extends AbstractService implements Operacio
 		this.clearInforme();
 		
 		String fechaHoy = DateTimeUtil.formatDateTime1(DateTimeUtil.getDate());
+		
 		String outputFileName = new String("C:\\Servina\\Backups\\bajada_" + fechaHoy + ".txt");
 //		String outputFileName = new String("//home//marce//Desktop//Liberdina//Servina//Backups//bajada_" + fechaHoy + ".txt");
 

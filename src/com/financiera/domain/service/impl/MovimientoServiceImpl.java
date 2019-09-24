@@ -409,11 +409,12 @@ public class MovimientoServiceImpl extends AbstractService implements Movimiento
 			System.out.println("No encuentro mov para " + cliente.getNroDoc() + " " + fecha.toString()+ " " + importe);
 			throw new Exception("No encuentro movimiento para " + cliente.getId() + " " + fecha.toString());
 	}
-	private MovimientoBean actMovimientoItauBica(ClienteBean cliente, Date fecha, double importe, String codigoInternoBanco, Session s) throws Exception {
+	private MovimientoBean actMovimientoItauBica(ClienteBean cliente, int idServicio, Date fecha, double importe, String codigoInternoBanco, Session s) throws Exception {
 		if(cliente.getId() == 2181) {
 			System.out.println();
 		}
 		MovimientoBean movimientoBean = null;
+
 		boolean encontre;
 		Date d;
 		try {
@@ -423,12 +424,12 @@ public class MovimientoServiceImpl extends AbstractService implements Movimiento
 			encontre = false;
 			while(mI.hasNext() && !encontre) {
 				movimientoBean = (MovimientoBean)mI.next();
-
-				if(movimientoBean.getDescripcion().compareTo(codigoInternoBanco) == 0) {
-					if(movimientoBean.getImporte() == importe) {
-						auxIdServicio = movimientoBean.getIdServicio();
+				if(movimientoBean.getIdServicio() == idServicio) {  // tiene que ser el mismo servicio
+					if(movimientoBean.getDescripcion().compareTo(codigoInternoBanco) == 0) {
+						if(movimientoBean.getImporte() == importe) {
 							if(movimientoBean.getFecha().compareTo(fecha) == 0) {
-							encontre = true;
+								encontre = true;
+							}
 						}
 					}
 				}
@@ -450,11 +451,12 @@ public class MovimientoServiceImpl extends AbstractService implements Movimiento
 		//				if(movimientoBean.getIdCliente() == 5408) {
 		//					System.out.println(movimientoBean.getIdCliente());
 		//				} aaa
-					if(movimientoBean.getDescripcion().compareTo(codigoInternoBanco) == 0) {
-						if(movimientoBean.getImporte() == importe) {
-							auxIdServicio = movimientoBean.getIdServicio();
-							if(movimientoBean.getFecha().compareTo(fecha) == 0) {
-								encontre = true;
+					if(movimientoBean.getIdServicio() == idServicio) {  // tiene que ser el mismo servicio
+						if(movimientoBean.getDescripcion().compareTo(codigoInternoBanco) == 0) {
+							if(movimientoBean.getImporte() == importe) {
+								if(movimientoBean.getFecha().compareTo(fecha) == 0) {
+									encontre = true;
+								}
 							}
 						}
 					}
@@ -464,11 +466,13 @@ public class MovimientoServiceImpl extends AbstractService implements Movimiento
 					encontre = false;
 					while(mI.hasNext() && !encontre) {
 						movimientoBean = (MovimientoBean)mI.next();
-		
-						if(movimientoBean.getDescripcion().compareTo(codigoInternoBanco) == 0) {
-							if(movimientoBean.getImporte() == importe) {
-								if(movimientoBean.getFecha().compareTo(fecha) < 0) {
-									encontre = true;
+
+						if(movimientoBean.getIdServicio() == idServicio) {  // tiene que ser el mismo servicio
+							if(movimientoBean.getDescripcion().compareTo(codigoInternoBanco) == 0) {
+								if(movimientoBean.getImporte() == importe) {
+									if(movimientoBean.getFecha().compareTo(fecha) < 0) {
+										encontre = true;
+									}
 								}
 							}
 						}
@@ -480,7 +484,7 @@ public class MovimientoServiceImpl extends AbstractService implements Movimiento
 			if(encontre) {
 				movimientoBean.setAccion(Persistible.UPDATE);
 			} else {
-				movimientoBean.setAccion(Persistible.INSERT);
+//				movimientoBean.setAccion(Persistible.INSERT);
 			}
 		}
 		return movimientoBean;
@@ -1099,7 +1103,7 @@ public class MovimientoServiceImpl extends AbstractService implements Movimiento
 			while(ri.hasNext()) {
 				r = (RespuestaDTO)ri.next();
 //				System.out.println("Resp " + r);
-				if(r.getDni() == 16664623) {
+				if(r.getDni() == 10267911) {
 					System.out.println("Resp " + r);
 				}
 				clienteBean = cliente.getClienteByNroDoc(r.getDni(), sesion);
@@ -1156,7 +1160,7 @@ public class MovimientoServiceImpl extends AbstractService implements Movimiento
 					} else {
 						if(r.getCodigoInternoBanco().compareTo(new String(BancoBean.ITAU)) == 0 || r.getCodigoInternoBanco().compareTo(new String(BancoBean.BICA)) == 0) {
 							try {
-								movBean = this.actMovimientoItauBica(clienteBean, r.getFecha(), r.getImporte(), r.getCodigoInternoBanco(), sesion);
+								movBean = this.actMovimientoItauBica(clienteBean, r.getIdServicio(), r.getFecha(), r.getImporte(), r.getCodigoInternoBanco(), sesion);
 								switch(movBean.getAccion()) {
 									case Persistible.UPDATE: {
 										if(r.getFechaCobroReal() != null) {
@@ -1174,10 +1178,11 @@ public class MovimientoServiceImpl extends AbstractService implements Movimiento
 										movBean1.setIdCliente(clienteBean.getId());
 										movBean1.setCliente(clienteBean);
 										movBean1.setImporte(r.getImporte());										
-										movBean1.setIdServicio(fixIdservicio(servicioService, movBean1, sesion));
-										if(movBean1.getIdServicio() == null) {
-											movBean1.setIdServicio(auxIdServicio);
-										}
+										movBean1.setIdServicio(Long.valueOf(r.getIdServicio()));
+//										movBean1.setIdServicio(fixIdservicio(servicioService, movBean1, sesion));
+//										if(movBean1.getIdServicio() == null) {
+//											movBean1.setIdServicio(auxIdServicio);
+//										}
 										if(r.getFechaCobroReal() != null) {
 											movBean1.setFecha(r.getFechaCobroReal());
 										} else {

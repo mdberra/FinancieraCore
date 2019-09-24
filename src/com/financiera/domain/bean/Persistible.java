@@ -5,9 +5,9 @@ import org.hibernate.Session;
 
 public class Persistible {
 	public static final int NADA = -1;
-	public static final int INSERT = 0;
-	public static final int UPDATE = 1;
-	public static final int DELETE = 2;
+	public static final int INSERT = 1;
+	public static final int UPDATE = 2;
+	public static final int DELETE = 3;
 	
 	private int accion;
 	public int getAccion() {

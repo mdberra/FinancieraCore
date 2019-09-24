@@ -257,7 +257,7 @@ public class CtacteServicioImpl extends AbstractService implements CtacteServici
 						if(t.esTipoRegI()) {
 							if(t.isAceptado() || t.isRechazado()) {
 								rDTO = new RespuestaDTO();
-	
+								rDTO.setIdServicio(Integer.parseInt(t.getIdServicio()));
 								rDTO.setDni(Integer.parseInt(t.getDni()));
 								rDTO.setFecha(DateTimeUtil.getDateAAAAMMDD(t.getFecha()));
 								rDTO.setImporte(Double.parseDouble(t.getImporte()) / 100);
@@ -284,7 +284,7 @@ public class CtacteServicioImpl extends AbstractService implements CtacteServici
 					TemporalBicaBean t = new TemporalBicaBean();
 					t.setTemporalBicaBean(linea);
 					rDTO = new RespuestaDTO();
-					
+					rDTO.setIdServicio(Integer.parseInt(t.getIdServicio()));					
 					rDTO.setDni(Integer.parseInt(t.getDni()));
 					rDTO.setFecha(DateTimeUtil.getDate(t.getFecha()));
 					rDTO.setImporte(Double.parseDouble(t.getImporte())/100);

@@ -1,5 +1,7 @@
 package inicial;
 //
+// hibernate.cfg.xml
+//
 //  Restore
 // private void restore() {
 //
@@ -8,6 +10,8 @@ package inicial;
 //
 // GenerarDisparoServicioImpl 
 // private String[] dispararBaproSVille
+//
+// private void respuestas() {
 //
 import java.io.Console;
 import java.io.File;
@@ -77,8 +81,10 @@ public class Prueba {
 	private String usuarioString = new String("Administrador");
 	Session sesion;
 	private boolean validarMovExistente = true;
-	private String pathLinux = new String("//home//marce//Desktop//Liberdina//Servina//");
-	private String pathWindows = new String("c:\\Servina\\");
+//	private String pathLinux = new String("//home//marce//Desktop//Liberdina//Servina//");
+//	private String pathWindows = new String("c:\\Servina\\");
+	
+	private boolean isLinux = true;
 	
 	public static void main(String[] args) {
 		Prueba p = new Prueba();
@@ -154,8 +160,14 @@ public class Prueba {
 		}
 	}
 	private void respuestas() {
-		archivoService.buscarFilesCommon(new File("c:\\Servina\\Rendiciones\\"), "*");
-		String pathDestino = new String("c:\\Servina\\RendicionesProcesadas\\");
+		String pathDestino;
+		if(isLinux) {
+			archivoService.buscarFilesCommon(new File("//home//marce//Desktop//Liberdina//Servina//Rendiciones//"), "*");
+			pathDestino = new String("//home//marce//Desktop//Liberdina//Servina//RendicionesProcesadas//");			
+		} else {
+			archivoService.buscarFilesCommon(new File("c:\\Servina\\Rendiciones\\"), "*");
+			pathDestino = new String("c:\\Servina\\RendicionesProcesadas\\");
+		}
 		
 		Iterator<File> files = archivoService.getFiles().iterator();
 		while(files.hasNext()) {
@@ -243,8 +255,12 @@ public class Prueba {
 		} catch (Exception e) {}
 	}
 	private void restore() {
-		String[] informeOut = operaciones.Restore("c:\\Servina\\Backups\\subida.txt", usuarioString);
-//		String[] informeOut = operaciones.Restore("//home//marce//Liberdina//Servina//Backups//subida", usuarioString);
+		String[] informeOut;
+		if(isLinux) {
+			informeOut = operaciones.Restore("//home//marce//Desktop//Liberdina//Servina//Backups//subida", usuarioString);	
+		} else {
+			informeOut = operaciones.Restore("c:\\Servina\\Backups\\subida.txt", usuarioString);
+		}
 		for(int i=0; i<informeOut.length; i++) {
 			if(!Util.isBlank(informeOut[i]))
 				System.out.println(informeOut[i]);

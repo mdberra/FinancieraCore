@@ -21,6 +21,7 @@ public class TemporalItauBean {
 	private int 	nroEnvio;
 	private Date 	fechaGeneracionArchivo;
 	
+	private String  idServicio;
 	private String  tipoDoc;
 	private String  dni;					// 8
 	private String	fecha;					// 8   fecha del disparo ddmmaaaa
@@ -66,7 +67,7 @@ public class TemporalItauBean {
 		sb.append(Util.formateo(Util.TEXTO, 7, new String(" "), false));
 		sb.append("000");
 		sb.append(Util.formateo(Util.TEXTO, 14, new String(" "), false)); 
-		sb.append(Util.formateo(Util.NUMERICO, 8, m.getCliente().getNroDoc(), false));    // DNI
+		sb.append(Util.formateo(Util.NUMERICO, 8, m.getIdServicio(), false));    // idServicio
 		sb.append(Util.formateo(Util.TEXTO, 60, m.getCliente().getNyA(), false));
 		sb.append("DU"); // siempre DNI
 		sb.append(Util.formateo(Util.NUMERICO, 11, m.getCliente().getNroDoc(), false));   // DNI
@@ -136,6 +137,7 @@ public class TemporalItauBean {
 	}
 	public void setTemporalItauBean(String linea) {
 		this.tipoReg	= linea.substring(39, 40);
+		this.idServicio = linea.substring(40, 48);
 		this.tipoDoc	= linea.substring(62, 64);
 		this.dni		= linea.substring(67, 75);
 		this.fecha		= linea.substring(86, 94);
@@ -212,5 +214,11 @@ public class TemporalItauBean {
 	}
 	public void setTipoFile(String tipoFile) {
 		this.tipoFile = tipoFile;
+	}
+	public String getIdServicio() {
+		return idServicio;
+	}
+	public void setIdServicio(String idServicio) {
+		this.idServicio = idServicio;
 	}
 }

@@ -18,8 +18,8 @@
 	<classpathentry kind="lib" path="/home/marce/Desktop/Code/Lib/jta.jar"/>
 	<classpathentry kind="lib" path="/home/marce/Desktop/Code/Lib/jxl.jar"/>
 	<classpathentry kind="lib" path="/home/marce/Desktop/Code/Lib/log4j-1.2-api-2.5.jar"/>
-	<classpathentry kind="lib" path="/home/marce/Desktop/Code/Lib/mysql-connector-java-8.0.15.jar"/>
 	<classpathentry kind="lib" path="/home/marce/Desktop/Code/Lib/servlet-api.jar"/>
 	<classpathentry kind="lib" path="/home/marce/Desktop/Code/Lib/standard.jar"/>
+	<classpathentry kind="lib" path="/home/marce/Desktop/Code/Lib/mysql-connector-java-8.0.17.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

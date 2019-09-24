@@ -8,6 +8,7 @@ import com.financiera.core.util.Util;
 
 public class TemporalBicaBean {
 	private String  idCliente;
+	private String  idServicio;
 	private String  dni;					// 8
 	private String	fecha;					// 8   fecha del disparo ddmmaaaa
 	private String	importe;				// 10  8 enteros 2 decimales
@@ -24,7 +25,7 @@ public class TemporalBicaBean {
 		sb.append(";");
 		sb.append(Util.formateo(Util.NUMERICO, 11, m.getCliente().getNroDoc(), false));
 		sb.append(";");
-		sb.append(Util.formateo(Util.NUMERICO, 8, m.getCliente().getId(), false));
+		sb.append(Util.formateo(Util.NUMERICO, 8, m.getIdServicio(), false));
 
 		return sb.toString();
 	}
@@ -33,7 +34,7 @@ public class TemporalBicaBean {
 	    while (tokenizer.hasMoreElements()) {
 	        String t = tokenizer.nextToken();  		// CBU
 	        this.importe = tokenizer.nextToken();  	// importe
-	        this.idCliente = tokenizer.nextToken(); // id_cliente
+	        this.idServicio = tokenizer.nextToken(); // id_servicio cambio de id_cliente
 	        this.dni = tokenizer.nextToken();  		// DNI
 	        this.fecha = tokenizer.nextToken();  	// Fecha Original
 	        t = tokenizer.nextToken();  			// Fecha Compensacion
@@ -86,5 +87,17 @@ public class TemporalBicaBean {
 	}
 	public void setCodRechazo(String codRechazo) {
 		this.codRechazo = codRechazo;
+	}
+	public String getIdCliente() {
+		return idCliente;
+	}
+	public void setIdCliente(String idCliente) {
+		this.idCliente = idCliente;
+	}
+	public String getIdServicio() {
+		return idServicio;
+	}
+	public void setIdServicio(String idServicio) {
+		this.idServicio = idServicio;
 	}
 }

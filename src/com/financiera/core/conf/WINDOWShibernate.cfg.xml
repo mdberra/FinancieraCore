@@ -8,14 +8,10 @@
         <property name="dialect">org.hibernate.dialect.MySQLDialect</property>
         <property name="connection.driver_class">com.mysql.jdbc.Driver</property>
 
-	<property name="connection.url">jdbc:mysql://localhost:3306/Financiera?useSSL=false</property>
+		<property name="connection.url">jdbc:mysql://localhost:3306/financiera?useSSL=false</property>
 		<property name="connection.username">root</property>
-		<property name="connection.password">Liberdina</property> 
-
-<!--		<property name="connection.url">jdbc:mysql://35.193.110.100:3306/Financiera?useSSL=false</property>
-		<property name="connection.username">liberdinaroot</property>
-		<property name="connection.password">Newdestino2018</property> 
--->	
+		<property name="connection.password">mdbroot</property> 
+	
 		<!-- Use the C3P0 connection pool. 
 		<property name="c3p0.min_size">3</property>
 		<property name="c3p0.max_size">15</property>
